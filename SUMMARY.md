@@ -5,7 +5,7 @@
   * [Installing Hades](getting-started/installing-hades.md)
   * [Basic Syntax](getting-started/basic-syntax.md)
   * [Coding Conventions](getting-started/coding-conventions.md)
-* [Language spec](language-spec/README.md)
+* [Language Spec](language-spec/README.md)
   * [Basics](language-spec/basics/README.md)
     * [Types](language-spec/basics/types.md)
     * [Keywords](language-spec/basics/keywords.md)

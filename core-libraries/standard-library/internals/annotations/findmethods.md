@@ -1,7 +1,3 @@
----
-description: Finds multiple methods by annotation name.
----
-
 # findMethods
 
 ## Parameters

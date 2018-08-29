@@ -1,7 +1,3 @@
----
-description: Finds multiple methods by annotation name in the given proto.
----
-
 # findMethodsInProto
 
 ## Parameters

@@ -1,7 +1,3 @@
----
-description: Finds a method by annotation name.
----
-
 # findMethod
 
 ## Parameters

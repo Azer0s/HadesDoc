@@ -16,7 +16,11 @@ Hades basics and quick introduction into the language.
 
 Current coding style for HadesLang.
 
-## References {#references}
+## References
+
+### [Language Spec](language-spec/)
+
+The official HadesLang specification.
 
 ### [Package Documentation](core-libraries/standard-library/)
 
@@ -29,8 +33,4 @@ Documentation for HadesLang tools.
 ### [Examples](other/examples.md)
 
 Examples of Hades in use.
-
-### Language Spec
-
-The official HadesLang specification.
 
