@@ -4,7 +4,7 @@
 
 | Method | Parameters | Return type | Is fixed? |
 | :--- | :--- | :--- | :--- |
-| `toObj` | `lambda` | `obj` | dddd |
-| `toProto` | `lambda` | `proto` | dddd |
-| `fromString` | `string` | `lambda` | dddd |
+| `toObj` | `lambda` | `obj` | ✔️ |
+| `toProto` | `lambda` | `proto` | ✔️ |
+| `fromString` | `string` | `lambda` | ✔️ |
 
