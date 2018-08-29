@@ -60,7 +60,7 @@ with startWebServer.hd as web sets address="localhost", port=8080 //This would j
 
 For smaller projects, just put the source files in one folder.
 
-For bigger projects, use the [Hades project initializer](../tools.md#hades-project-initializer), which creates a Hades project with the following structure \(example for a project with the organization name **example.org** and the project name **testing**\):
+For bigger projects, use the [Hades project initializer](../other/tools.md#hades-project-initializer), which creates a Hades project with the following structure \(example for a project with the organization name **example.org** and the project name **testing**\):
 
 ```text
 project.json - Contains the project configuration, initial data (config, connection keys, etc...) and meta-data of libraries installed via Hermes.

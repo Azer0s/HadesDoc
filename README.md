@@ -18,15 +18,15 @@ Current coding style for HadesLang.
 
 ## References {#references}
 
-### [Package Documentation](standard-library/)
+### [Package Documentation](core-libraries/standard-library/)
 
 Documentation and definition of the Hades standard library.
 
-### [Tool Documentation](tools.md)
+### [Tool Documentation](other/tools.md)
 
 Documentation for HadesLang tools.
 
-### [Examples](examples.md)
+### [Examples](other/examples.md)
 
 Examples of Hades in use.
 
