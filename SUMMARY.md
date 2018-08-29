@@ -44,6 +44,8 @@
     * [annotations](standard-library/internals/annotations/README.md)
       * [findMethod](standard-library/internals/annotations/findmethod.md)
       * [findMethodInProto](standard-library/internals/annotations/findmethodinproto.md)
+      * [findMethods](standard-library/internals/annotations/findmethods.md)
+      * [findMethodsInProto](standard-library/internals/annotations/findmethodsinproto.md)
     * [function](standard-library/internals/function.md)
   * [std:collections](standard-library/list/README.md)
     * [list](standard-library/list/list.md)
