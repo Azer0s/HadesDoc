@@ -5,7 +5,7 @@
   * [ ] [Installing Hades](../getting-started/installing-hades.md)
   * [x] [Basic Syntax](../getting-started/basic-syntax.md)
   * [x] [Coding Conventions](../getting-started/coding-conventions.md)
-* [ ] Language spec
+* [ ] **Language Spec**
   * [ ] **Basics**
     * [ ] [Types](../language-spec/basics/types.md)
     * [ ] [Keywords](../language-spec/basics/keywords.md)
@@ -33,27 +33,29 @@
     * [ ] [Reflection](../language-spec/other/reflection.md)
     * [ ] [Script file arguments](../language-spec/other/script-file-arguments.md)
     * [ ] [This keyword](../language-spec/other/this-keyword.md)
-* [ ] **Standard library**
-  * [ ] [std:io](../core-libraries/standard-library/console/)
-    * [ ] console
-    * [ ] file
-    * [ ] directory
-  * [ ] [std:exceptions](../core-libraries/standard-library/std-exceptions.md)
-  * [ ] [std:int](../core-libraries/standard-library/std-int.md)
-  * [ ] [std:internals](../core-libraries/standard-library/internals/)
-    * [ ] annotations
-    * [ ] function
-  * [ ] [std:collections](../core-libraries/standard-library/list/)
-    * [ ] list
-  * [ ] [std:math](../core-libraries/standard-library/math/)
-    * [ ] math
-    * [ ] constants
-  * [ ] [std:networking](../core-libraries/standard-library/std-networking.md)
-  * [ ] [std:os](../core-libraries/standard-library/os.md)
-  * [ ] [std:string](../core-libraries/standard-library/string.md)
-  * [ ] [std:sql](../core-libraries/standard-library/std-sql.md)
-* [ ] **Extra libraries**
-  * [ ] [mssql:client](../core-libraries/extra-libraries/mssql-client.md)
-* [ ] \*\*\*\*[**Tools**](tools.md)\*\*\*\*
-* [ ] \*\*\*\*[**Examples**](examples.md)\*\*\*\*
+* [ ] C**ore Libraries**
+  * [ ] **Standard library**
+    * [ ] [std:io](../core-libraries/standard-library/console/)
+      * [ ] console
+      * [ ] file
+      * [ ] directory
+    * [ ] [std:exceptions](../core-libraries/standard-library/std-exceptions.md)
+    * [ ] [std:int](../core-libraries/standard-library/std-int.md)
+    * [ ] [std:internals](../core-libraries/standard-library/internals/)
+      * [ ] annotations
+      * [ ] function
+    * [ ] [std:collections](../core-libraries/standard-library/list/)
+      * [ ] list
+    * [ ] [std:math](../core-libraries/standard-library/math/)
+      * [ ] math
+      * [ ] constants
+    * [ ] [std:networking](../core-libraries/standard-library/std-networking.md)
+    * [ ] [std:os](../core-libraries/standard-library/os.md)
+    * [ ] [std:string](../core-libraries/standard-library/string.md)
+    * [ ] [std:sql](../core-libraries/standard-library/std-sql.md)
+  * [ ] **Extra libraries**
+    * [ ] [mssql:client](../core-libraries/extra-libraries/mssql-client.md)
+* [ ] **Other**
+  * [ ] \*\*\*\*[**Tools**](tools.md)\*\*\*\*
+  * [ ] \*\*\*\*[**Examples**](examples.md)\*\*\*\*
 
