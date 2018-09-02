@@ -1,14 +1,28 @@
 # Declaring functions
 
-## Declaring a function with static types
+## Declaring a function
 
-## Declaring a function with dynamic types
+### With static types
 
-## Access modifiers
+### With dynamic types
 
-## Using varargs
+### With varargs
 
-## Using function guards
+## Function attributes
+
+### Access modifiers
+
+### Fixed function
+
+Fixed functions are like static function in Java or C\#. One can only declare fixed functions in classes, because in scripts or mixed files, every function which is outside a class is accessible.
+
+### Using function guards
+
+## Overriding functions
+
+### Overriding built-in functions and operators
+
+### Overriding inherited functions
 
 ## Nested functions
 
@@ -23,11 +37,9 @@ end
 functionWithDefaultValues(b=2, d="D", "This is 'a'", "This is 'c'", f=false, "This is 'e'") 
 ```
 
-## Fixed function
-
-Fixed functions are like static function in Java or C\#. One can only declare fixed functions in classes, because in scripts or mixed files, every function which is outside a class is accessible.
-
 ## Functions and lambdas
 
 ### Internal representation of functions
+
+### Assigning a function to a lambda
 
