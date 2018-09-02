@@ -45,7 +45,7 @@ console->out:"OS not recognized!"
 os->exit(-1)
 &fi%
 
-$if ge OS_VERSION 1803%
+%if ge OS_VERSION 1803%
 os->exec("wslpath 'c:\users'")
 %fi%
 
