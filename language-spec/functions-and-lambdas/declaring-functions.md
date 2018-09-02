@@ -4,6 +4,26 @@
 
 ### With static types
 
+A function which is defined with static types, can only be called with those lines. If a function definition for a function with the types specified in the function call does not exist, execution will fail.
+
+```swift
+with console from std:io
+
+func add(int a, int b)
+    console->out:"Adds two ints"
+    put a + b
+end
+
+func add(string a, string b)
+    console->out:"Concatenates two strings"
+    put "{} {}"->format(a,b)
+end
+
+add(2,2) //Output: Adds two ints
+add("Hello","world") //Output: Concatenates two strings
+add(1.5,1.5) //Execution fails
+```
+
 ### With dynamic types
 
 ### With varargs
