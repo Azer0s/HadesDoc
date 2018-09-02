@@ -158,10 +158,10 @@ var e //Type is inferred on first usage
 
 Variables outside of functions \(either in script files or class definitions\) can name an access modifier.
 
-```c
-global //Accessible from everywhere
-public //Accessible over direct access
-closed //Not accessible from outside
+```csharp
+global  //Accessible from everywhere
+public  //Accessible over direct access
+private //Not accessible from outside
 ```
 
 When defining a global variable with the name of another global variable that already exists, the variable will not be defined and the assignment will not be executed.
@@ -174,8 +174,8 @@ obj[] global var employees
 class employee
     let public string firstname be "John"
     public let lastname is "Doe"
-    int var closed age is 18
-    var string[] attributes //When no access modifier is given, the variable will have closed access
+    int var private age is 18
+    var string[] attributes //When no access modifier is given, the variable will have private access
 end
 ```
 
