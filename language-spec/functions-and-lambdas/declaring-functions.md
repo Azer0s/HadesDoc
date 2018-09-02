@@ -4,6 +4,8 @@
 
 ## Declaring a function with dynamic types
 
+## Access modifiers
+
 ## Using varargs
 
 ## Using function guards
