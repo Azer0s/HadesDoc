@@ -1,11 +1,10 @@
 # Basic Syntax
 
-## Script file arguments
+## Hello world
 
-Script file arguments should be at the very top of the source file. They don't require a type specification, but can have one if you want the script execution to fail when an argument with the wrong type was given.
-
-```text
-requires int age, name 
+```javascript
+with console from std:io
+console->out:"Hello world"
 ```
 
 ## Defining functions
@@ -342,5 +341,11 @@ fruits->map({x => x.toLower()})->filter({x => x.startsWith("a")})->forEach({x =>
 //map(lambda), filter(lambda) and forEach(lambda) are methods from the list class
 ```
 
+## Script file arguments
 
+Script file arguments should be at the very top of the source file. They don't require a type specification, but can have one if you want the script execution to fail when an argument with the wrong type was given.
+
+```text
+requires int age, name 
+```
 
