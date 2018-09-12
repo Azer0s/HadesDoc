@@ -86,7 +86,7 @@ With function guards, an initial condition has to be fulfilled for the function 
 ```swift
 with console from std:io
 
-func myFunction(int a) requires a smaller 10
+func myFunction(int a) requires a < 10
     console->out:"a is smaller than 10"
 end
 
@@ -94,7 +94,7 @@ func myFunction(int a) requires a equals 11
     console->out:"a is 11"
 end
 
-func myFunction(int a) requires a greater 11 and a smaller 21
+func myFunction(int a) requires a > 11 and a < 21
     console->out:"a is greater than 11 and smaller than 21"
 end
 
@@ -198,11 +198,11 @@ Hades supports end-of-line and block comments.
 An if statement can contain n `else if` blocks and one `else` block.
 
 ```python
-if(a smaller 10)
+if(a < 10)
     console->out:"a is smaller than 10"
 else if(a equals 11)
     console->out:"a is 11"
-else if(a greater 11 and a smaller 21)
+else if(a > 11 and a < 21)
     console->out:"a is greater than 11 and smaller than 21"
 else
     console->out:"a is " + a
