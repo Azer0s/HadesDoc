@@ -1,7 +1,5 @@
 # Comparison and equality
 
-In Hades, there are a few comparison operators that always return a `bool` result.
-
 ## Comparison
 
 We can compare values using C style comparison operators:
