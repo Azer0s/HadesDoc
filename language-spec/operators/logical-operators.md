@@ -11,20 +11,20 @@ The inversion operator \(`!`\) returns `true` if the operand is `false`, and `fa
 
 ## and
 
-The `and` expression determines if two values are both `true`. It returns `true` if both values are `true` and `false` otherwise:
+The `and` or `&&` expression determines if two values are both `true`. It returns `true` if both values are `true` and `false` otherwise:
 
 ```javascript
-true and false // false
+true && false // false
 true and true  // true
 ```
 
 ## or
 
-The `or` expression determines if either of the values \(or both\) are `true`. It returns `true` if one \(or both\) of the values are `true`.
+The `or` or `||`expression determines if either of the values \(or both\) are `true`. It returns `true` if one \(or both\) of the values are `true`.
 
 ```javascript
 false or false // false
-true or false  // true
+true || false  // true 
 ```
 
 
