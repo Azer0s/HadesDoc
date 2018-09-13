@@ -9,7 +9,7 @@ The inversion operator \(`!`\) returns `true` if the operand is `false`, and `fa
 !false //true
 ```
 
-## and
+## Logical and
 
 The `and` or `&&` expression determines if two values are both `true`. It returns `true` if both values are `true` and `false` otherwise:
 
@@ -18,7 +18,7 @@ true && false // false
 true and true  // true
 ```
 
-## or
+## Logical or
 
 The `or` or `||`expression determines if either of the values \(or both\) are `true`. It returns `true` if one \(or both\) of the values are `true`.
 

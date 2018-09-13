@@ -1,6 +1,6 @@
 # Bitwise operators
 
-## Shift
+## Bitshift
 
 ### Left shift
 
@@ -22,11 +22,11 @@ var a = 8 >> 2
 console->out:a //Output: 2
 ```
 
-## And
+## Bitwise and
 
-## Or
+## Bitwise or
 
-## Xor
+## Bitwise xor
 
 ## One's complement
 
