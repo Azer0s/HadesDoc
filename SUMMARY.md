@@ -14,6 +14,7 @@
     * [Comparison and equality](language-spec/operators/comparison-and-equality.md)
     * [Logical operators](language-spec/operators/logical-operators.md)
     * [Bitwise operators](language-spec/operators/bitwise-operators.md)
+    * [Compound Assignment Operators](language-spec/operators/compound-assignment-operators.md)
   * [Control flow](language-spec/control-flow/README.md)
     * [Conditions](language-spec/control-flow/conditions.md)
     * [Loops](language-spec/control-flow/loops.md)

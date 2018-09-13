@@ -10,11 +10,11 @@
     * [ ] [Types](../language-spec/basics/types.md)
     * [ ] [Keywords](../language-spec/basics/keywords.md)
     * [ ] [Imports and libraries](../language-spec/basics/imports-and-libraries.md)
-  * [ ] **Operators**
+  * [x] **Operators**
     * [x] [Comparison and equality](../language-spec/operators/comparison-and-equality.md)
     * [x] [Logical operators](../language-spec/operators/logical-operators.md)
-    * [ ] [Bitwise operators](../language-spec/operators/bitwise-operators.md)
-    * [ ] Compound Assignment Operators
+    * [x] [Bitwise operators](../language-spec/operators/bitwise-operators.md)
+    * [x] [Compound Assignment Operators](../language-spec/operators/compound-assignment-operators.md)
   * [ ] **Control Flow**
     * [ ] [Conditions](../language-spec/control-flow/conditions.md)
     * [ ] [Loops](../language-spec/control-flow/loops.md)
