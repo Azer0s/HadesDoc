@@ -2,7 +2,7 @@
 
 ## Complex data types
 
-### obj
+### object
 
 ### struct
 
@@ -27,9 +27,6 @@
 ### One-dimensional array
 
 ### Multi-dimensional array
-
-Access:  
-
 
 ```javascript
 with console from std:io
