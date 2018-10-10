@@ -183,7 +183,7 @@ with button from gui:controls
 
 ### Lambdas
 
-Lambdas that have more than one expression \(complex lambdas\) are formatted like Java methods with the parameters on the first line and need a manual `put`:
+Lambdas that have more than one expression \(complex lambdas\) are formatted like Java methods \(the parameters on the first line\) and need a manual `put`:
 
 ```javascript
 var pow = { x,y => 
@@ -197,7 +197,7 @@ var pow = { x,y =>
     put result
 }
 
-var add = {x,y => x + y} //Simple lambda
+var add = {x,y => x + y} //Simple lambda, don't need a put statement
 ```
 
 Same for match:
