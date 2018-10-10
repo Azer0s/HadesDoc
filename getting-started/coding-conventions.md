@@ -69,6 +69,7 @@ src/ - Upper most directory for source files
  org/ - Organization tld
   example/ - Organization name
    testing/ - Project name
+     main.hd - Entrypoint
 ```
 
 ## Naming rules
