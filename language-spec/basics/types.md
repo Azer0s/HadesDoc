@@ -14,6 +14,12 @@ A struct is declared like a block. Every variable declared in a struct is public
 
 ### proto
 
+A proto is the entry point of a class/struct/library. There are 2 types of protos: non-instantiable protos and instantiable protos. As the name implies, non-instantiable protos can not be instantiated, while instantiable protos can be.
+
+The constructor of a class or a struct is a proto, so are types imported from a library.
+
+**See:** [Declaring protos](../classes-and-variables/declaring-protos.md)
+
 ### lambda
 
 A lambda is an anonymous function. In Hades, there are 2 types of lambdas: the simple lambda and the complex lambda.
