@@ -26,7 +26,7 @@ console->out:a //Output: 2
 
 The result of the bitwise and \(denoted by `&`\) is 1 if the corresponding bits of two operands are 1. If either bit of an operand is 0, the result of corresponding bit is evaluated to 0.
 
-```text
+```javascript
 with console from std:io
 
 var a = 12 //00001100 in binary
