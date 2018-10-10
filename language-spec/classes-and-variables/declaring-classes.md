@@ -9,7 +9,7 @@
 ### Simple inheritance
 
 ```swift
-class sportsCar< car
+class sportsCar < car
     @public
         let int maxSpeed
 	    let dec secondsTo60
