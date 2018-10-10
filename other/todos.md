@@ -30,7 +30,7 @@
     * [ ] [Working with objects](../language-spec/classes-and-variables/working-with-objects.md)
   * [ ] **Functions and lambdas**
     * [ ] [Declaring functions](../language-spec/functions-and-lambdas/declaring-functions.md)
-    * [ ] [Declaring lambdas](../language-spec/functions-and-lambdas/declaring-lambdas.md)
+    * [ ] [Declaring lambdas]()
   * [ ] **Other**
     * [ ] [Annotations](../language-spec/other/annotations.md)
     * [ ] [C\# interop](../language-spec/other/c-interop.md)
