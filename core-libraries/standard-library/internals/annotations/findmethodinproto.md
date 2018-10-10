@@ -9,7 +9,7 @@
 
 ## Return type
 
-The method returns an `obj(annotationResult)`.
+The method returns an `object(annotationResult)`.
 
 ## Example
 

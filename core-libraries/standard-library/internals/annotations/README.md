@@ -4,12 +4,14 @@
 
 | Method | Parameters | Return type | Is fixed? |
 | :--- | :--- | :--- | :--- |
-| [`findMethod`](findmethod.md) | `string` | `obj(annotationResult)` | ✔️ |
-| [`findMethodInProto`](findmethodinproto.md) | `string, proto` | `obj(annotationResult)` | ✔️ |
-| [`findMethods`](findmethods.md) | `string` | `obj(list)` | ✔️ |
-| [`findMethodsInProto`](findmethodsinproto.md) | `string, proto` | `obj(list)` | ✔️ |
-| `findClass` | `string` | `obj(annotationResult)` | ✔️ |
-| `findClassInProto` | `string, proto` | `obj(annotationResult)` | ✔️ |
-| `findClasses` | `string` | `obj(list)` | ✔️ |
-| `findClassesInProto` | `string, proto` | `obj(list)` | ✔️ |
+| [`findMethod`](findmethod.md) | `string` | `object(annotationResult)` | ✔️ |
+| [`findMethodInProto`](findmethodinproto.md) | `string, proto` | `object(annotationResult)` | ✔️ |
+| [`findMethods`](findmethods.md) | `string` | `object(list)` | ✔️ |
+| [`findMethodsInProto`](findmethodsinproto.md) | `string, proto` | `object(list)` | ✔️ |
+| `findClass` | `string` | `object(annotationResult)` | ✔️ |
+| `findClassInProto` | `string, proto` | `object(annotationResult)` | ✔️ |
+| `findClasses` | `string` | `object(list)` | ✔️ |
+| `findClassesInProto` | `string, proto` | `object(list)` | ✔️ |
+
+
 

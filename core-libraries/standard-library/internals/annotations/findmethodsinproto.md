@@ -9,7 +9,7 @@
 
 ## Return type
 
-The method returns an `obj(list)`.
+The method returns an `object(list)`.
 
 ## Example
 
