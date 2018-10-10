@@ -38,7 +38,7 @@
     * [x] [Preprocessor statements](../language-spec/other/preprocessor-statements.md)
     * [ ] [Reflection](../language-spec/other/reflection.md)
     * [ ] [Script file arguments](../language-spec/other/script-file-arguments.md)
-    * [ ] [This keyword](../language-spec/other/this-keyword.md)
+    * [ ] [this keyword](../language-spec/other/this-keyword.md)
 * [ ] C**ore Libraries**
   * [ ] **Standard library**
     * [ ] [std:io](../core-libraries/standard-library/console/)
