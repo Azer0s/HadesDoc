@@ -168,7 +168,7 @@ When defining a global variable with the name of another global variable that al
 #### Examples:
 
 ```swift
-obj[] global var employees
+object[] global var employees
 
 class employee
     let public string firstname be "John"
@@ -294,7 +294,7 @@ Variable is of type: string
 with client from mssql:client
 with console from std:io
 
-var obj connection is client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
+var object connection is client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
     
 try
     connection->open:
