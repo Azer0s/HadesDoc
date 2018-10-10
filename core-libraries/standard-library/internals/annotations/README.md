@@ -20,3 +20,4 @@
 | `findFieldInProto` | `string, proto` | `object(annotationResult)` | ✔️ |
 | `findFields` | `string` | `object(list)` | ✔️ |
 | `findFieldsInProto` | `string, proto` | `object(list)` | ✔️ |
+

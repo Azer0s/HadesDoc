@@ -32,7 +32,7 @@
     * [ ] [Declaring functions](../language-spec/functions-and-lambdas/declaring-functions.md)
     * [x] [Declaring lambdas]()
   * [ ] **Other**
-    * [ ] [Annotations](../language-spec/other/annotations.md)
+    * [x] [Annotations](../language-spec/other/annotations.md)
     * [ ] [C\# interop](../language-spec/other/c-interop.md)
     * [ ] [Omitting braces](../language-spec/other/omitting-braces.md)
     * [x] [Preprocessor statements](../language-spec/other/preprocessor-statements.md)
