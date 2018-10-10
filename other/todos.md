@@ -1,8 +1,8 @@
 # Todos
 
-* [ ] **Getting Started**
+* [x] **Getting Started**
   * [x] [Index](../getting-started/)
-  * [ ] [Installing Hades](../getting-started/installing-hades.md)
+  * [x] [Installing Hades](../getting-started/installing-hades.md)
   * [x] [Basic Syntax](../getting-started/basic-syntax.md)
   * [x] [Coding Conventions](../getting-started/coding-conventions.md)
 * [ ] **Language Spec**
@@ -25,12 +25,12 @@
   * [ ] **Classes** **and variables**
     * [ ] [Declaring variables](../language-spec/classes-and-variables/declaring-variables.md)
     * [ ] [Declaring classes](../language-spec/classes-and-variables/declaring-classes.md)
-    * [ ] [Declaring structs](../language-spec/classes-and-variables/declaring-structs.md)
+    * [x] [Declaring structs](../language-spec/classes-and-variables/declaring-structs.md)
     * [ ] [Declaring Protos](../language-spec/classes-and-variables/declaring-protos.md)
     * [ ] [Working with objects](../language-spec/classes-and-variables/working-with-objects.md)
   * [ ] **Functions and lambdas**
     * [ ] [Declaring functions](../language-spec/functions-and-lambdas/declaring-functions.md)
-    * [ ] [Declaring lambdas]()
+    * [x] [Declaring lambdas]()
   * [ ] **Other**
     * [ ] [Annotations](../language-spec/other/annotations.md)
     * [ ] [C\# interop](../language-spec/other/c-interop.md)
