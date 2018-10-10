@@ -61,6 +61,6 @@
   * [ ] **Extra libraries**
     * [ ] [mssql:client](../core-libraries/extra-libraries/mssql-client.md)
 * [ ] **Other**
-  * [ ] \*\*\*\*[**Tools**](tools.md)\*\*\*\*
+  * [x] \*\*\*\*[**Tools**](tools.md)\*\*\*\*
   * [ ] \*\*\*\*[**Examples**](examples.md)\*\*\*\*
 
