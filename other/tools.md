@@ -48,7 +48,7 @@ src/ - Upper most directory for source files
 
 ## Hermes
 
-Hermes is the Hades package manager. Similar to maven or nuget, Hermes has a package file which contains a list of dependencies. Hermes doesn't have its own dedicated package server, but uses Github as a package server instead. The version of a package specified in the Hermes file translates to the git branch.
+Hermes is the Hades package manager. Similar to maven or nuget, Hermes has a package file which contains a list of dependencies. Hermes doesn't have its own dedicated package server, but uses Github \(if not specified otherwise\) as a package server instead. The version of a package specified in the `project.json` file translates to the git branch.
 
 ### Examples
 
@@ -60,11 +60,21 @@ $ hermes add hades/xml master
 
 ## project.json
 
+A `project.json` file defines a Hades project. The `project.json` file contains meta-data of all packages installed through Hermes, initial data \(like configuration or connection keys\), information about the project itself and even a basic pipeline to execute commands/scripts before and after the execution of a Hades project.
+
 ```javascript
 {
-  "name" : "demoproject",
-  "version" : "0.1",
-  "before-exec" : [
+  "name" : "demoproject", // name of the project
+  "version" : "0.1", // version of the project
+  
+  "config" : { // initial config/connectionkeys of the project
+    "motd" : "Hello world",
+    "logo" : "resources/logo.png",
+    "default-lang" : "en-US",
+    "db1" : "Server=localhost;Database=demo;User Id=demo;Password=myPassword;"
+  },
+  
+  "before-exec" : [ // will be executed before the project starts up
     {
       "execute" : "script/bash",
       "target" : "install.sh"
@@ -73,25 +83,30 @@ $ hermes add hades/xml master
       "execute" : "command",
       "target" : "kill $(lsof -t -i:8080)"
     }
-  ]
-  "after-exec" : [
+  ],
+  
+  "after-exec" : [ // will be executed after the project has been killed
     {
       "execute" : "script/hades",
       "target" : "clean.hd"
     }
-  ]
-  "dependencies" : [
+  ],
+  
+  "dependencies" : [ // dependencies installed via Hermes
     {
       "name" : "hades/web",
-      "version" : "3.2.4"
+      "version" : "3.2.4",
+      "from" : "github.com"
     },
     {
       "name" : "hades/json",
-      "version" : "master"
+      "version" : "master",
+      "from" : "github.com"
     },
     {
       "name" : "hades/xml",
-      "version" : "master"
+      "version" : "master",
+      "from" : "github.com"
     }
   ]
 }
