@@ -10,7 +10,7 @@ An object is the native return type of a proto. It is created when a class is in
 
 ### struct
 
-Structs can have variables, stored in them. They can not contain functions \(however, they can contain lambdas\) or a constructor. They're constructed sequentially \(constructor parameters are passed in in the same sequence the variables are defined in the struct\).
+Structs can have variables, stored in them. They can not contain functions \(however, they can contain lambdas\) or a constructor. They're constructed sequentially \(constructor parameters are passed in, in the same sequence the variables are defined in the struct\).
 
 A struct is declared like a block. Every variable declared in a struct is public.
 
@@ -44,7 +44,7 @@ A string variable stores text. There's virtually no upper limit for the size of 
 
 ### dec
 
-Similar to a float, the dec datatype stores a decimal number. The fundamental difference between a normal floating point number and a dec, is that the dec has more precision and a smaller range.  
+Similar to a float, the dec datatype stores a decimal number. The fundamental difference between a normal floating-point number and a dec, is that the dec has more precision and a smaller range.  
 The range of a dec is -79,228,162,514,264,337,593,543,950,335.0 to 79,228,162,514,264,337,593,543,950,335.0.
 
 ### bool
@@ -56,7 +56,7 @@ The bool \(named after George Boole\) can store a single bit represented by the 
 | Datatype | Range | Default Value |
 | :--- | :--- | :--- |
 | int | -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807 | 0 |
-| string | 0 to 1,073,741,824 |  |
+| string | 0 to 1,073,741,824 characters |  |
 | dec | -79,228,162,514,264,337,593,543,950,335.0 to 79,228,162,514,264,337,593,543,950,335.0 | 0.0 |
 | bool | false or true | false |
 
