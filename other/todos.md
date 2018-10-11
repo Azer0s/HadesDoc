@@ -24,7 +24,7 @@
     * [ ] [Pipelines](../language-spec/control-flow/pipelines.md)
   * [ ] **Classes** **and variables**
     * [ ] [Declaring variables](../language-spec/classes-and-variables/declaring-variables.md)
-    * [ ] [Declaring classes](../language-spec/classes-and-variables/declaring-classes.md)
+    * [x] [Declaring classes](../language-spec/classes-and-variables/declaring-classes.md)
     * [x] [Declaring structs](../language-spec/classes-and-variables/declaring-structs.md)
     * [ ] [Declaring Protos](../language-spec/classes-and-variables/declaring-protos.md)
     * [ ] [Working with objects](../language-spec/classes-and-variables/working-with-objects.md)

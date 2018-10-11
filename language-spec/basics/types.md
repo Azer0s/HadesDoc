@@ -4,6 +4,10 @@
 
 ### object
 
+An object is the native return type of a proto. It is created when a class is instantiated. A class can contain other classes, functions, variables and constructors. A class doesn't need a constructor to be instantiated. A class can also have fixed methods which can be accessed from the proto scope \(the class must not be instantiated for them to be called\).
+
+**See:** [Declaring classes](../classes-and-variables/declaring-classes.md)
+
 ### struct
 
 Structs can have variables, stored in them. They can not contain functions \(however, they can contain lambdas\) or a constructor. They're constructed sequentially \(constructor parameters are passed in in the same sequence the variables are defined in the struct\).
