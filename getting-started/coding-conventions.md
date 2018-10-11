@@ -74,7 +74,7 @@ src/ - Upper most directory for source files
 
 ## Naming rules
 
-Most things in Hades follow [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase), except for fixed methods which follow [PascalCase](https://wiki.c2.com/?PascalCase), global variables and preprocessor variables which are uppercase and underscore separated and native libraries which are named like so: `native library name : library file`. Classes and proto names can either follow [PascalCase](https://wiki.c2.com/?PascalCase) or  [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase) \(just don't mix up two different styles in one project\).
+Most things in Hades follow [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase), except for global variables and preprocessor variables which are uppercase and underscore separated and native libraries which are named like so: `native library name : library file`. Classes and struct names follow [PascalCase](https://wiki.c2.com/?PascalCase) while proto names are in [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase).
 
 ### Global variables
 
@@ -99,7 +99,7 @@ global var int HIGH_SCORE is 0
 %set APPLICATION_NAME My Application%
 ```
 
-### Functions
+### Functions \([Lower Camel Case](http://wiki.c2.com/?LowerCamelCase)\) 
 
 ```swift
 func addTwoNumbers(a,b)
@@ -107,7 +107,7 @@ func addTwoNumbers(a,b)
 end
 
 class classWithFixedFunction
-    fixed func AddTwoNumbers(a,b)
+    fixed func addTwoNumbers(a,b)
         put a + b
     end
 end
@@ -126,19 +126,6 @@ class Person
 end
 ```
 
-### Classes \([Lower Camel Case](http://wiki.c2.com/?LowerCamelCase)\)
-
-```javascript
-class superFastCar
-    var int id
-    
-    @public
-        var string name
-        var dec topSpeedInMph
-    end
-end
-```
-
 ### Structs \([PascalCase](https://wiki.c2.com/?PascalCase)\)
 
 ```csharp
@@ -147,23 +134,6 @@ struct Person
     var string firstname
     var string lastname
 end
-```
-
-### Structs \([Lower Camel Case](http://wiki.c2.com/?LowerCamelCase)\)
-
-```csharp
-struct superFastCar
-    var int id
-    var string name
-    var dec topSpeedInMph
-end
-```
-
-### Protos \([PascalCase](https://wiki.c2.com/?PascalCase)\)
-
-```javascript
-with list from std:collections
-var proto List is list
 ```
 
 ### Protos \([Lower Camel Case](http://wiki.c2.com/?LowerCamelCase)\) 
