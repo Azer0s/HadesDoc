@@ -7,7 +7,7 @@
   * [x] [Coding Conventions](../getting-started/coding-conventions.md)
 * [ ] **Language Spec**
   * [ ] **Basics**
-    * [ ] [Types](../language-spec/basics/types.md)
+    * [x] [Types](../language-spec/basics/types.md)
     * [ ] [Keywords](../language-spec/basics/keywords.md)
     * [ ] [Imports and libraries](../language-spec/basics/imports-and-libraries.md)
   * [x] **Operators**
@@ -26,7 +26,8 @@
     * [ ] [Declaring variables](../language-spec/classes-and-variables/declaring-variables.md)
     * [x] [Declaring classes](../language-spec/classes-and-variables/declaring-classes.md)
     * [x] [Declaring structs](../language-spec/classes-and-variables/declaring-structs.md)
-    * [ ] [Declaring Protos](../language-spec/classes-and-variables/declaring-protos.md)
+    * [ ] [Declaring protos](../language-spec/classes-and-variables/declaring-protos.md)
+    * [x] [Declaring arrays](../language-spec/classes-and-variables/declaring-arrays.md)
     * [ ] [Working with objects](../language-spec/classes-and-variables/working-with-objects.md)
   * [ ] **Functions and lambdas**
     * [ ] [Declaring functions](../language-spec/functions-and-lambdas/declaring-functions.md)

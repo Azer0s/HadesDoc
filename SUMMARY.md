@@ -27,6 +27,7 @@
     * [Declaring classes](language-spec/classes-and-variables/declaring-classes.md)
     * [Declaring structs](language-spec/classes-and-variables/declaring-structs.md)
     * [Declaring protos](language-spec/classes-and-variables/declaring-protos.md)
+    * [Declaring arrays](language-spec/classes-and-variables/declaring-arrays.md)
     * [Working with objects](language-spec/classes-and-variables/working-with-objects.md)
   * [Functions and lambdas](language-spec/functions-and-lambdas/README.md)
     * [Declaring functions](language-spec/functions-and-lambdas/declaring-functions.md)

@@ -75,14 +75,15 @@ string? var b = null
 
 ### One-dimensional array
 
+In Hades an array can be declared as an array of a fixed size or as an infinite array. The maximum theoretical maximum length of an array is  2,146,435,071.
+
+Infinite arrays have n dimensions, meaning they can also be used as a multi-dimensional array.
+
 ### Multi-dimensional array
 
-```javascript
-with console from std:io
+Multi dimensional arrays are arrays of arrays. Just like normal arrays they can be declared with a fixed size.
 
-var a = {{"Hello",{"world"}},{" ","bar"}}
-console->out:a[0.0] + a[1.0] + a[0.1.0] //Output: Hello world
-```
+**See:** [Declaring arrays](../classes-and-variables/declaring-arrays.md)
 
 
 
