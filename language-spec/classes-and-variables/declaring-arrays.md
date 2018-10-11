@@ -2,7 +2,7 @@
 
 ## Declaring one-dimensional arrays
 
-A one dimensional fixed array is created either via an array literal or via appending `[]` to the `var/let` keyword or the type of the variable with the size or \* \(for an infinite array\) between the brackets.
+A one dimensional fixed array is created either via an array literal or via appending `[]` to the `var/let` keyword or the type of the variable with the size or `*`\(for an infinite array\) between the brackets.
 
 ```javascript
 with console from std:io
