@@ -2,7 +2,7 @@
 
 ## Declaring one-dimensional arrays
 
-A one dimensional fixed array is created either via an array literal or via appending `[]` to the `var/let` keyword or the type of the variable with the size or `*`\(for an infinite array\) between the brackets.
+A one dimensional fixed array is created either via an array literal or via appending `[]` to the `var/let` keyword \(but only if the type of the variable isn't given\) or the type of the variable with the size or `*`\(for an infinite array\) between the brackets.
 
 ```javascript
 with console from std:io
@@ -10,9 +10,12 @@ with console from std:io
 var hello = {"Hello","world"}
 console->out:hello [0] + hello [1] //Output: Hello world
 
-var[2] fooBar
+var[2] fooBar //this is a valid decleration because the type isn't given
 fooBar[0] = 10 //type of the array is infered here
 fooBar[1] = 20
+
+var[2] string strArray //this is an invalid decleration!
+var string[2] strArray //this would be correct
 
 let string[*] text be console->in()->split(" ")
 ```
