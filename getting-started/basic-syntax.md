@@ -168,7 +168,7 @@ When defining a global variable with the name of another global variable that al
 #### Examples:
 
 ```swift
-object[] global var employees
+object[] global var EMPLOYEES
 
 class employee
     let public string firstname be "John"
