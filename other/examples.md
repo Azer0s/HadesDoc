@@ -27,7 +27,7 @@ var calculate = { x => (x == 0) or (x == 1) ? x : calculate(x-1) + calculate(x-2
 ### main.hd
 
 ```javascript
-with fib.hd as fib
+with fib from fib.hd
 with console from std:io
 with Int fixed from std:int
 
