@@ -97,7 +97,7 @@ class Mother
     end
 end
 
-class Mother
+class Father
     func talk()
         out:"I am male"
     end
