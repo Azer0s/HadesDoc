@@ -56,6 +56,7 @@
     * [ ] [std:math](../core-libraries/standard-library/math/)
       * [ ] math
       * [ ] constants
+      * [ ] matrix
     * [ ] [std:networking](../core-libraries/standard-library/std-networking.md)
     * [ ] [std:os](../core-libraries/standard-library/os.md)
     * [ ] [std:string](../core-libraries/standard-library/string.md)
