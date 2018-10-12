@@ -61,6 +61,7 @@
     * [std:math](core-libraries/standard-library/math/README.md)
       * [math](core-libraries/standard-library/math/math.md)
       * [constants](core-libraries/standard-library/math/constants.md)
+      * [matrix](core-libraries/standard-library/math/matrix.md)
     * [std:networking](core-libraries/standard-library/std-networking.md)
     * [std:os](core-libraries/standard-library/os.md)
     * [std:string](core-libraries/standard-library/string.md)
