@@ -27,7 +27,7 @@ The syntax of creating multi-dimensional arrays is similar to that of creating o
 ```swift
 var int[3.3] matrix = {{1,0,0},{0,1,0},{0,0,1}}
 
-var names = {{"John", "Greg"}, {"Anna", "Susan"}}
+var names = {{"John", "Greg"}, {"Anna", "Susan"}} //type of the array is infered here, names is now a string[2.2]
 
 let int[*] a = {{3,7,3,0},{0,2,-1,1},{5,4,3,2},{6,6,4,-1}}
 ```
