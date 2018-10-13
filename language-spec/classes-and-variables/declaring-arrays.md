@@ -14,6 +14,8 @@ var fooBar
 fooBar[0] = 10 //type of the array is infered here, fooBar is now an int[*]
 fooBar[1] = 20
 
+var int[10] fib = {1,1,2,3,5,8,13,21,34,55}
+
 var barFoo
 barFoo[0] = null //type of the array is infered here, barFoo is now an object[*]
 
