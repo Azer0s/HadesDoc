@@ -10,7 +10,7 @@ The Hades project initializer pretty much does what the name implies. It initial
 {% tab title="Create with organization name" %}
 ### Initialize the project
 
-```text
+```bash
 $ hades new demoproject.example.org
 ```
 
@@ -54,7 +54,7 @@ Hermes is the Hades package manager. Similar to maven or nuget, Hermes has a pac
 
 #### Add a package to your Hades project
 
-```text
+```bash
 $ hermes add hades/xml master
 ```
 
