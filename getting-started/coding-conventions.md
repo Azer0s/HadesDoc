@@ -99,7 +99,7 @@ global var int HIGH_SCORE is 0
 %set APPLICATION_NAME My Application%
 ```
 
-### Functions \([Lower Camel Case](http://wiki.c2.com/?LowerCamelCase)\) 
+### Functions \([Lower Camel Case](http://wiki.c2.com/?LowerCamelCase)\)
 
 ```swift
 func addTwoNumbers(a,b)
@@ -118,7 +118,7 @@ end
 ```swift
 class Person
     var int id
-    
+
     @public
         var string firstname
         var string lastname
@@ -136,7 +136,7 @@ struct Person
 end
 ```
 
-### Protos \([Lower Camel Case](http://wiki.c2.com/?LowerCamelCase)\) 
+### Protos \([Lower Camel Case](http://wiki.c2.com/?LowerCamelCase)\)
 
 ```javascript
 with list from std:collections
@@ -159,12 +159,12 @@ Lambdas that have more than one expression \(complex lambdas\) are formatted lik
 ```javascript
 var pow = { x,y => 
     var result = 1
-    
+
     while(y not 0)
         result *= x
         y--
     end
-    
+
     put result
 }
 
@@ -206,4 +206,21 @@ end
 ### Tabs vs spaces
 
 It is absolutely irrelevant whether you choose tabs or spaces for indentation. As long as you stay consistent and don't mix tabs and spaces, it doesn't matter.
+
+## Miscellaneous
+
+### Ignored catch block
+
+If you choose not to handle a exception, mark the block as ignored with a comment.
+
+```javascript
+with console from std:io
+with file from std:io
+
+try
+    file->read("hello.txt")
+catch(default e)
+    //ignored
+end
+```
 
