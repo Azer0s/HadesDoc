@@ -198,6 +198,8 @@ Hades supports end-of-line and block comments.
 An if statement can contain n `else if` blocks and one `else` block.
 
 ```python
+with console from std:io
+
 if(a < 10)
     console->out:"a is smaller than 10"
 else if(a equals 11)
@@ -263,6 +265,8 @@ var numberFromStringNullchecked = numberFromString :: 0
 The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. If multiple match cases evaluate to true, the first match case is invoked, except if specified otherwise \(with `to multiple`\).
 
 ```javascript
+with console from std:io
+
 let fruit = "Apple"
 var lambda action = { x => 
     console->print("Variable is of type: ")
