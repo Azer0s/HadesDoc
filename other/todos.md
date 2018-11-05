@@ -18,7 +18,7 @@
     * [x] [Operator overloading](../language-spec/operators/operator-overloading.md)
   * [ ] **Control Flow**
     * [x] [Conditions](../language-spec/control-flow/conditions.md)
-    * [ ] [Loops](../language-spec/control-flow/loops.md)
+    * [x] [Loops](../language-spec/control-flow/loops.md)
     * [ ] [Exception handling](../language-spec/control-flow/exception-handling.md)
     * [ ] [Ternary and nullcheck operators](../language-spec/control-flow/ternary-and-nullcheck-operators.md)
     * [ ] [Pipelines](../language-spec/control-flow/pipelines.md)
