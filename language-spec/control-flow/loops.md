@@ -32,7 +32,7 @@ while(c not 10)
 end
 ```
 
-## `stop` and `proceed` statements
+## `stop` and `skip` statements
 
 The `stop` statement stops a loop.
 
@@ -50,7 +50,7 @@ while(true)
 end
 ```
 
-The `proceed` statement skips over the current state of a loop. In `while` loops, this just skips execution of the code after the `proceed` statement. In a `for` loop, this statement also skips to the next value of an array.
+The `skip` statement skips over the current state of a loop. In `while` loops, this just skips execution of the code after the `skip` statement. In a `for` loop, this statement also skips to the next value of an array.
 
 ```javascript
 with console from std:io
@@ -60,7 +60,7 @@ var c = 0
 while(c not 10)
     if(c not 5)
         c++
-        proceed
+        skip
     end
     
     console->out:"c is 5"
@@ -68,5 +68,24 @@ while(c not 10)
 end
 
 // Output: c is 5 
+
+var fruits is {"Apple", "Banana", "Mango", "Kiwi"}
+
+for(var fruit in fruits)
+    if(fruit == "Banana")
+        skip
+    end
+    
+    console->out:fruit
+end
+
+/*
+Output:
+Apple
+Mango
+Kiwi
+*/
 ```
+
+
 
