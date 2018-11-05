@@ -330,18 +330,18 @@ with console from std:io
 var fruits = list->of({"Apple", "Banana", "Mango", "Kiwi", "Avocado"})
 
 fruits
-|> map({x => x.toLower()}, ??)
-|> filter({x => x.startsWith("a")}, ??)
+|> map({x => x->toLower()}, ??)
+|> filter({x => x->startsWith("a")}, ??)
 |> forEach({x => console->out:x}, ??)
 
 //As opposed to
 
-forEach({x => console->out:x}, filter({x => x.startsWith("a")}, map({x => x.toLower()}, fruits)))
+forEach({x => console->out:x}, filter({x => x->startsWith("a")}, map({x => x->toLower()}, fruits)))
 //map(lambda, list), filter(lambda, list) and forEach(lambda, list) are static methods from the list class
 
 //Or even
 
-fruits->map({x => x.toLower()})->filter({x => x.startsWith("a")})->forEach({x => console->out:x})
+fruits->map({x => x->toLower()})->filter({x => x->startsWith("a")})->forEach({x => console->out:x})
 //map(lambda), filter(lambda) and forEach(lambda) are methods from the list class
 ```
 
