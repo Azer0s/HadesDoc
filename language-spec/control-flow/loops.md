@@ -59,6 +59,7 @@ var c = 0
 
 while(c not 10)
     if(c not 5)
+        c++
         proceed
     end
     
