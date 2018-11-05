@@ -28,7 +28,7 @@ src/ - Upper most directory for source files
 {% endtab %}
 
 {% tab title="Create without organization name" %}
-### Initialize a project
+### Initialize the project
 
 ```bash
 $ hades new demoproject
