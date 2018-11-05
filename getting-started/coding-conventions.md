@@ -42,7 +42,7 @@ project.json
 And the import statement would look like this:
 
 ```javascript
-with connection.client from weather.hd
+with connection->client from weather.hd
 ```
 
 #### Mixed files
@@ -178,10 +178,10 @@ var fruit = "Apple"
 
 match(fruit) to multiple
     "Apple" => { _ =>
-        console.out:"Apples are really tasty!"
-        console.out:"I like apples!"
+        console->out:"Apples are really tasty!"
+        console->out:"I like apples!"
     }
-    fruit.type() equals "string" => { _ => console.out:"Variable is a string"} //Simple lambda
+    fruit->type() equals "string" => { _ => console->out:"Variable is a string"} //Simple lambda
 end
 ```
 
@@ -193,7 +193,7 @@ Pipelines don't have indentation. A pipeline statement uses the indentation of t
 with list fixed from std:collections
 
 func filterAndPrint(fruits, filterBy="a")
-    list.of(fruits)
+    list->of(fruits)
     |> map({x => x->toLower()}, ??)
     |> filter({x => x->startsWith(filterBy)}, ??)
     |> forEach({x => console->out:x}, ??)
