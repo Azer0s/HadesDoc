@@ -70,7 +70,7 @@ Calculator->add(2,2)
 Calculator->Adder()->add(2,2) //This works too because we declared a non-fixed (instantiable) class inside the fixed class
 ```
 
-## Declaring a class withing a class
+## Declaring a class within a class
 
 ```swift
 with console fixed from std:io
