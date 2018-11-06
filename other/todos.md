@@ -16,12 +16,12 @@
     * [x] [Bitwise operators](../language-spec/operators/bitwise-operators.md)
     * [x] [Compound Assignment Operators](../language-spec/operators/compound-assignment-operators.md)
     * [x] [Operator overloading](../language-spec/operators/operator-overloading.md)
-  * [ ] **Control Flow**
+  * [x] **Control Flow**
     * [x] [Conditions](../language-spec/control-flow/conditions.md)
     * [x] [Loops](../language-spec/control-flow/loops.md)
     * [x] [Exception handling](../language-spec/control-flow/exception-handling.md)
-    * [ ] [Ternary and nullcheck operators](../language-spec/control-flow/ternary-and-nullcheck-operators.md)
-    * [ ] [Pipelines](../language-spec/control-flow/pipelines.md)
+    * [x] [Ternary and nullcheck operators](../language-spec/control-flow/ternary-and-nullcheck-operators.md)
+    * [x] [Pipelines](../language-spec/control-flow/pipelines.md)
   * [ ] **Classes** **and variables**
     * [ ] [Declaring variables](../language-spec/classes-and-variables/declaring-variables.md)
     * [x] [Declaring classes](../language-spec/classes-and-variables/declaring-classes.md)

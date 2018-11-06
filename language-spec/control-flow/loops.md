@@ -4,6 +4,8 @@
 
 In Hades, there is no C-style count-controlled loop, but only a foreach loop which iterates over an array.
 
+### Example
+
 ```javascript
 with math fixed from std:math
 with console from std:io
@@ -23,6 +25,8 @@ end
 
 The `while` loop pretty much works like you'd expect. It loops as long as a given condition evaluates to `true`.
 
+### Example
+
 ```javascript
 with console from std:io
 var c = 0
@@ -35,6 +39,8 @@ end
 ## `stop` and `skip` statements
 
 The `stop` statement stops a loop.
+
+### Example
 
 ```javascript
 with console from std:io
@@ -51,6 +57,8 @@ end
 ```
 
 The `skip` statement skips over the current state of a loop. In `while` loops, this just skips execution of the code after the `skip` statement. In a `for` loop, this statement also skips to the next value of an array.
+
+### Example
 
 ```javascript
 with console from std:io

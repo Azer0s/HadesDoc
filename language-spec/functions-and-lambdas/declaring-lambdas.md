@@ -4,7 +4,7 @@
 
 The **simple lambda** consists of only a single statement. It will automatically return the result of said statement without the need of the `put` keyword.
 
-#### Example
+### Example
 
 ```javascript
 var add = { x,y => x + y}
@@ -15,7 +15,7 @@ add(2,2) //this would return 4
 
 A **complex lambda** contains multiple LOC and does require the use of the `put` keyword to return things.
 
-#### Example
+### Example
 
 ```javascript
 var pow = { x,y => 
@@ -36,7 +36,7 @@ pow(4,2) //this would return 16
 
 If no parameter is needed, an `_` is used as the parameter name, instead.
 
-#### Example
+### Example
 
 ```javascript
 with console from std:io

@@ -17,12 +17,16 @@ greaterThan >= orEqual
 
 We can test two values for equality:
 
+#### Example
+
 ```javascript
 1 == 2 //false
 "2" equals "2" //true
 ```
 
 And for inequality:
+
+#### Example
 
 ```javascript
 1 not 2 //true
@@ -33,12 +37,16 @@ And for inequality:
 
 We can test different types for equality \(which will, by default, always evaluate to `false`\).
 
+#### Example
+
 ```javascript
 314 == "pi" // false
 123 equals "123" // false
 ```
 
 And for inequality \(which will, by default, always evaluate to `true`\).
+
+#### Example
 
 ```javascript
 314 not "pi" // true

@@ -2,7 +2,7 @@
 
 All operator in Hades can be overloaded. The syntax for this is similar to overloading an inherited function.
 
-#### Example
+### Example
 
 ```swift
 class Couple

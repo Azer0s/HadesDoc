@@ -13,7 +13,7 @@ A compound assignment operator executes an operation \(with the variable on the 
 * **Bitwise xor** and assign \(`^=`\)
 * **Bitwise or** and assign \(`|=`\)
 
-#### Examples
+### Example
 
 ```javascript
 var a = 12

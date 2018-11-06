@@ -4,6 +4,8 @@
 
 The `if` statement executes statements based on some conditions.
 
+### Example
+
 ```python
 with console from std:io
 
@@ -19,6 +21,8 @@ end
 ```
 
 An `if` block can contain multiple `else if` block.
+
+### Example
 
 ```python
 with console from std:io
@@ -37,6 +41,8 @@ end
 ## `match` block
 
 The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. If multiple match cases evaluate to true, the first match case is invoked, except if specified otherwise \(with `to multiple`\).
+
+### Example
 
 ```javascript
 with console from std:io

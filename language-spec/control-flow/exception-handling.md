@@ -8,6 +8,8 @@ In Hades, every object can be an exception. There is a collection of standard ex
 
 If you want to catch all exceptions, use the `default` keyword. 
 
+### Example
+
 ```javascript
 with client from mssql:client
 with console from std:io
@@ -41,6 +43,8 @@ end
 ## `raise` statement
 
 The raise statement raises an exception. Since any object can be an exception, the variable/statement with which the raise statement is invoked has to be an object.
+
+### Example
 
 ```swift
 with exceptions from std:exceptions

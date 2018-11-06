@@ -6,6 +6,8 @@
 
 A function which is defined with static types, can only be called with those lines. If a function definition for a function with the types specified in the function call does not exist, execution will fail.
 
+### Example
+
 ```swift
 with console from std:io
 

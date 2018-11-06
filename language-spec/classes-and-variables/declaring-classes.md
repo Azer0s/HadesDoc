@@ -2,6 +2,8 @@
 
 ## Declaring a class
 
+### Example
+
 ```swift
 with date from std:date
 
@@ -30,6 +32,8 @@ var member1 = Member("John", "Doe", Date(1,1,1970), "25aca5a7-cbfa-47ed-aeb5-f96
 
 A class without a constructor can still be instantiated. In the following example the class Calculator has two fixed methods which can be accessed without the class needing to be instantiated.
 
+### Example
+
 ```swift
 class Calculator
     fixed func add(a,b)
@@ -48,6 +52,8 @@ calc->add(2,2)
 ## Declaring a non-instantiable class
 
 A class marked fixed can not be instantiated. All functions or structs declared in it, are fixed. It may contain a constructor \(but it can't be accessed without using reflection\). One can declare a non-fixed class inside a fixed class and vice-versa.
+
+### Example
 
 ```swift
 fixed class Calculator
@@ -72,6 +78,8 @@ Calculator->Adder()->add(2,2) //This works too because we declared a non-fixed (
 
 ## Declaring a class within a class
 
+### Example
+
 ```swift
 with console fixed from std:io
 
@@ -87,6 +95,8 @@ var innerClass = outerClass->innerClass() //Outputs: Hello from inner class
 ```
 
 ## Working with inheritance
+
+#### Base classes
 
 ```swift
 with console fixed from std:io
@@ -106,6 +116,8 @@ end
 
 ### Simple inheritance
 
+#### Example
+
 ```swift
 class Daughter < Mother
 end
@@ -116,6 +128,8 @@ Daughter()->talk() //Outputs: I am female
 ### Multiple inheritance
 
 When functions overlap each other when inheriting from multiple members, the order of the members to inherit from dictates which function is taken.
+
+#### Example
 
 ```swift
 class Child < Mother, Father
@@ -131,6 +145,8 @@ Child()->talk() //Outputs: I am male
 ## Overriding inherited members
 
 To override a function, use the `func!` keyword. This overrides functions and functions groups with function guards.
+
+### Example
 
 ```swift
 with console fixed from 

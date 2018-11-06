@@ -4,6 +4,8 @@
 
 A one dimensional fixed array is created either via an array literal or via appending `[]` to  the type of the variable with the size or `*`\(for an infinite array\) between the brackets. If no variable type is given, the type array is infered on first use and the variable will be an infinite array
 
+### Example
+
 ```javascript
 with console from std:io
 
@@ -26,6 +28,8 @@ let string[*] text be console->in()->split(" ")
 
 The syntax of creating multi-dimensional arrays is similar to that of creating one-dimensional arrays. But instead of a single size, you put the size of each dimension between the brackets seperated by a `.` .
 
+### Example
+
 ```swift
 var int[3.3] matrix = {{1,0,0},{0,1,0},{0,0,1}}
 
@@ -37,6 +41,8 @@ let int[*] a = {{3,7,3,0},{0,2,-1,1},{5,4,3,2},{6,6,4,-1}}
 ## Arrays of nullable types
 
 Making an array nullable is done in the same way as making a variable nullable: you put a `?` in front of the datatype or let the interpreter infer the array type.
+
+### Example
 
 ```swift
 var int?[2.2.2] 3dArray = {{{1,2},{3,null}},{{null,6},{7,8}}}
