@@ -9,7 +9,7 @@
   * [ ] **Basics**
     * [x] [Types](../language-spec/basics/types.md)
     * [ ] [Imports and libraries](../language-spec/basics/imports-and-libraries.md)
-    * [ ] [Built-in functions](../language-spec/basics/built-in-functions.md)
+    * [x] [Built-in functions](../language-spec/basics/built-in-functions.md)
   * [x] **Operators**
     * [x] [Comparison and equality](../language-spec/operators/comparison-and-equality.md)
     * [x] [Logical operators](../language-spec/operators/logical-operators.md)
