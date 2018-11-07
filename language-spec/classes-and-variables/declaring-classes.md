@@ -98,6 +98,8 @@ var innerClass = outerClass->innerClass() //Outputs: Hello from inner class
 
 In Hades, it is possible to declare a class in a function. This function can only be instantiated \(provided it's an instantiable class\) in said function but can be returned and therefore used outside the function scope.
 
+### Example
+
 ```swift
 func getPerson(fn,ln)
     class Person
