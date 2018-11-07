@@ -246,11 +246,13 @@ end
 Hades supports conditional expressions and nullchecking with inline statements.
 
 ```javascript
-requires int a, b
-
+with params from std:params
 with exceptions from std:exceptions
 with str from std:string
 with Int from std:int
+
+var a = params->get(0)
+var b = params->get(1)
 
 a :: raise exceptions->ArgumentNullException("{} is null"->format(nameof(a)))
 b :: raise exceptions->ArgumentNullException("{} is null"->format(nameof(b)))
@@ -348,7 +350,18 @@ fruits->map({x => x->toLower()})->filter({x => x->startsWith("a")})->forEach({x 
 
 Script file arguments should be at the very top of the source file. They don't require a type specification, but can have one if you want the script execution to fail when an argument with the wrong type was given.
 
-```text
-requires int age, name 
+```javascript
+with params from std:params
+
+var address = params->getString(0)
+var port = params->getInt(1)
+var deamon = params->getBoolByName("d","deamon")
+
+/*
+so the execution call could look like:
+hades server.hd localhost 8080 -d true
+*/
 ```
+
+
 
