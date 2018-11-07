@@ -268,9 +268,8 @@ The match block is similar to a switch block in C languages. Match cases accept 
 with console from std:io
 
 let fruit = "Apple"
-var lambda action = { x => 
-    console->print("Variable is of type: ")
-    console->out:x
+var lambda action = { _ => 
+    console->print("Variable is of type string")
 }
 
 match(fruit) to
@@ -288,7 +287,7 @@ end
 /*
 Output: 
 Apples are really tasty!
-Variable is of type: string
+Variable is of type string
 */
 ```
 
