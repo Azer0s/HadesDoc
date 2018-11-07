@@ -1,0 +1,2 @@
+# Functions of simple types
+

@@ -8,8 +8,8 @@
 * [ ] **Language Spec**
   * [ ] **Basics**
     * [x] [Types](../language-spec/basics/types.md)
-    * [ ] [Keywords](../language-spec/basics/keywords.md)
     * [ ] [Imports and libraries](../language-spec/basics/imports-and-libraries.md)
+    * [ ] [Built-in functions](../language-spec/basics/built-in-functions.md)
   * [x] **Operators**
     * [x] [Comparison and equality](../language-spec/operators/comparison-and-equality.md)
     * [x] [Logical operators](../language-spec/operators/logical-operators.md)
@@ -32,6 +32,11 @@
   * [ ] **Functions and lambdas**
     * [ ] [Declaring functions](../language-spec/functions-and-lambdas/declaring-functions.md)
     * [x] [Declaring lambdas]()
+  * [ ] **Functions of simple types** 
+    * [ ] [int](../language-spec/functions-of-simple-types/int.md)
+    * [ ] [string](../language-spec/functions-of-simple-types/string.md)
+    * [ ] [dec](../language-spec/functions-of-simple-types/dec.md)
+    * [ ] [bool](../language-spec/functions-of-simple-types/bool.md)
   * [ ] **Other**
     * [x] [Annotations](../language-spec/other/annotations.md)
     * [ ] [C\# interop](../language-spec/other/c-interop.md)
