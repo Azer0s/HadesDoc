@@ -20,11 +20,11 @@ end
 
 ## Null-conditional operator `::`
 
-The null conditional operator checks if the left side of the operator evaluates to `null`. If it does, the statement on the right side of the operator is executed.
+The null conditional operator checks if the left side of the operator evaluates to `null`. If it does, the statement on the right side of the operator is executed and returned.
 
 ### Example
 
-```javascript
+```swift
 with exceptions from std:exceptions
 with console from std:io
 
@@ -39,5 +39,9 @@ catch(default e)
 end
 
 //Output: x is null
+
+func add(a,b) requires (a :: false) and (b :: false)
+    put a + b
+end
 ```
 
