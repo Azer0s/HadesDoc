@@ -42,7 +42,7 @@ Fixed functions are like static function in Java or C\#. One can only declare fi
 
 ## Overriding functions
 
-### Overriding built-in functions and operators
+### Overriding built-in functions
 
 ### Overriding inherited functions
 

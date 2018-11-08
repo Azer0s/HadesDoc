@@ -4,7 +4,7 @@
 
 In Hades, every object can be an exception. There is a collection of standard exceptions \(in `std:exceptions`\) but nothing prevents you from throwing any object as an exception. This comes in quite handy when you want to handle multiple exceptions with very different error sources. 
 
-## `try-catch` block
+## `try-catch-else` block
 
 If you want to catch all exceptions, use the `default` keyword. 
 
@@ -38,6 +38,19 @@ try
 catch(FileNotFoundException e)
     console->out("File {} not found!"->format(e->file))
 end
+```
+
+Code in an `else` block after a `try-catch` will be executed if the execution didn't fail.
+
+### Example
+
+```javascript
+with console from std:io
+var number
+
+try
+    number = int(console->in())
+    
 ```
 
 ## `raise` statement

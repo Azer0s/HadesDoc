@@ -259,6 +259,7 @@ b :: raise exceptions->ArgumentNullException("{} is null"->format(nameof(b)))
 
 var number is a < b ? b : a
 var numberFromString = Int->parse(value="This is not an integer", raise=false)
+//one could also use int("This is not an integer")
 var numberFromStringNullchecked = numberFromString :: 0
 ```
 
