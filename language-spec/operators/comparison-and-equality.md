@@ -21,7 +21,7 @@ We can test two values for equality:
 
 ```javascript
 1 == 2 //false
-"2" equals "2" //true
+"2" is "2" //true
 ```
 
 And for inequality:
@@ -41,7 +41,7 @@ We can test different types for equality \(which will, by default, always evalua
 
 ```javascript
 314 == "pi" // false
-123 equals "123" // false
+123 is "123" // false
 ```
 
 And for inequality \(which will, by default, always evaluate to `true`\).

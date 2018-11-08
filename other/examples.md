@@ -8,7 +8,7 @@
 {% tab title="With a function" %}
 ```swift
 func calculate(n)
-    if((n equals 0) or (n equals 1))
+    if((n is 0) or (n is 1))
         put n
     end
     

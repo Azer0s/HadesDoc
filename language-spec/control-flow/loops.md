@@ -77,7 +77,7 @@ end
 
 // Output: c is 5 
 
-var fruits is {"Apple", "Banana", "Mango", "Kiwi"}
+var fruits = {"Apple", "Banana", "Mango", "Kiwi"}
 
 for(var fruit in fruits)
     if(fruit == "Banana")

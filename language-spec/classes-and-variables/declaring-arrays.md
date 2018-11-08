@@ -21,7 +21,7 @@ var int[10] fib = {1,1,2,3,5,8,13,21,34,55}
 var barFoo
 barFoo[0] = null //type of the array is infered here, barFoo is now an object[*]
 
-let string[*] text be console->in()->split(" ")
+let string[*] text = console->in()->split(" ")
 ```
 
 ## Declaring multi-dimensional arrays

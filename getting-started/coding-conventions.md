@@ -81,15 +81,15 @@ Most things in Hades follow [Lower Camel Case](http://wiki.c2.com/?LowerCamelCas
 ```csharp
 //In a global annotation block
 @global
-    var string API_KEY is "1fea971e-55e3-4ce2-a5a4-6057388a7809"
+    var string API_KEY = "1fea971e-55e3-4ce2-a5a4-6057388a7809"
     var SESSION_USER
     var SESSION_PASSWORD
     var SESSION_PASSWORD_HASH
 end
 
 //As standalone
-let global string VERSION_NUMBER be "0.7.1"
-global var int HIGH_SCORE is 0
+let global string VERSION_NUMBER = "0.7.1"
+global var int HIGH_SCORE = 0
 ```
 
 ### Preprocessor variables

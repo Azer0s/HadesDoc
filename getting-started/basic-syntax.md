@@ -90,7 +90,7 @@ func myFunction(int a) requires a < 10
     console->out:"a is smaller than 10"
 end
 
-func myFunction(int a) requires a equals 11
+func myFunction(int a) requires a is 11
     console->out:"a is 11"
 end
 
@@ -131,13 +131,13 @@ end
 
 ## Defining variables
 
-Variables can be assigned with the keywords `is` or `be`, or the `=` operator.
+Variables can be assigned with the `=` operator.
 
 ### Read-only local variable
 
 ```javascript
-let string a be "Hello, World!" //Immediate assignment
-let b be "What's up?" //Type 'string' is inferred
+let string a = "Hello, World!" //Immediate assignment
+let b = "What's up?" //Type 'string' is inferred
 let string c //Type 'string' is given, but variable is not assigned
 string let d //The order of the attributes doesn't matter
 let e //Type is inferred on first usage
@@ -146,8 +146,8 @@ let e //Type is inferred on first usage
 ### Mutable local variables
 
 ```kotlin
-var string a is "Hello, World!" //Immediate assignment
-var b is "What's up?" //Type 'string' is inferred
+var string a = "Hello, World!" //Immediate assignment
+var b = "What's up?" //Type 'string' is inferred
 var string c //Type 'string' is given, but variable is not assigned
 string var d //The order of the attributes doesn't matter
 var e //Type is inferred on first usage
@@ -171,9 +171,9 @@ When defining a global variable with the name of another global variable that al
 object[] global var EMPLOYEES
 
 class employee
-    let public string firstname be "John"
-    public let lastname is "Doe"
-    int var private age is 18
+    let public string firstname = "John"
+    public let lastname = "Doe"
+    int var private age = 18
     var string[] attributes //When no access modifier is given, the variable will have private access
 end
 ```
@@ -202,7 +202,7 @@ with console from std:io
 
 if(a < 10)
     console->out:"a is smaller than 10"
-else if(a equals 11)
+else if(a is 11)
     console->out:"a is 11"
 else if(a > 11 and a < 21)
     console->out:"a is greater than 11 and smaller than 21"
@@ -257,7 +257,7 @@ var b = params->get(1)
 a :: raise exceptions->ArgumentNullException("{} is null"->format(nameof(a)))
 b :: raise exceptions->ArgumentNullException("{} is null"->format(nameof(b)))
 
-var number is a < b ? b : a
+var number = a < b ? b : a
 var numberFromString = Int->parse(value="This is not an integer", raise=false)
 //one could also use int("This is not an integer")
 var numberFromStringNullchecked = numberFromString :: 0
@@ -277,14 +277,14 @@ var lambda action = { _ =>
 
 match(fruit) to
     "Apple" => { _ => console->out:"Apples are really tasty!"}
-    fruit->type() equals "string" => action
+    fruit->type() is "string" => action
 end
 
 //Output: Apples are really tasty!
 
 match(fruit) to multiple
     "Apple" => { _ => console->out:"Apples are really tasty!"}
-    fruit->type() equals "string" => action
+    fruit->type() is "string" => action
 end
 
 /*
@@ -300,7 +300,7 @@ Variable is of type string
 with client from mssql:client
 with console from std:io
 
-var object connection is client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
+var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
     
 try
     connection->open:
@@ -318,7 +318,7 @@ end
 ```javascript
 with Calculator as calc from calc.hd
 
-var calculator is calc() //no new keyword in Hades; instead the proto 'calc' is called
+var calculator = calc() //no new keyword in Hades; instead the proto 'calc' is called
 ```
 
 ## Pipelines

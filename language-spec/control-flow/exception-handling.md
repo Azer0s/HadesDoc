@@ -15,7 +15,7 @@ with client from mssql:client
 with console from std:io
 with file from std:io
 
-var object connection is client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
+var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
     
 try
     connection->open:

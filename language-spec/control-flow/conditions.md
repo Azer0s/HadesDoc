@@ -11,7 +11,7 @@ with console from std:io
 
 if(a < 10)
     console->out:"a is smaller than 10"
-else if(a equals 11)
+else if(a is 11)
     console->out:"a is 11"
 else if(a > 11 and a < 21)
     console->out:"a is greater than 11 and smaller than 21"
@@ -54,14 +54,14 @@ var lambda action = { _ =>
 
 match(fruit) to
     "Apple" => { _ => console->out:"Apples are really tasty!"}
-    fruit->type() equals "string" => action
+    fruit->type() is "string" => action
 end
 
 //Output: Apples are really tasty!
 
 match(fruit) to multiple
     "Apple" => { _ => console->out:"Apples are really tasty!"}
-    fruit->type() equals "string" => action
+    fruit->type() is "string" => action
 end
 
 /*
