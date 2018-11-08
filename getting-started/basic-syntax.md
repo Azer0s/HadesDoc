@@ -197,7 +197,7 @@ Hades supports end-of-line and block comments.
 
 An if statement can contain n `else if` blocks and one `else` block.
 
-```python
+```javascript
 with console from std:io
 
 if(a < 10)
