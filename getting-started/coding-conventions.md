@@ -181,7 +181,7 @@ match(fruit) to multiple
         console->out:"Apples are really tasty!"
         console->out:"I like apples!"
     }
-    fruit->type() equals "string" => { _ => console->out:"Variable is a string"} //Simple lambda
+    fruit->type() is "string" => { _ => console->out:"Variable is a string"} //Simple lambda
 end
 ```
 
