@@ -139,7 +139,6 @@ Variables can be assigned with the `=` operator.
 let string a = "Hello, World!" //Immediate assignment
 let b = "What's up?" //Type 'string' is inferred
 let string c //Type 'string' is given, but variable is not assigned
-string let d //The order of the attributes doesn't matter
 let e //Type is inferred on first usage
 ```
 
@@ -149,7 +148,6 @@ let e //Type is inferred on first usage
 var string a = "Hello, World!" //Immediate assignment
 var b = "What's up?" //Type 'string' is inferred
 var string c //Type 'string' is given, but variable is not assigned
-string var d //The order of the attributes doesn't matter
 var e //Type is inferred on first usage
 ```
 
@@ -171,9 +169,9 @@ When defining a global variable with the name of another global variable that al
 object[] global var EMPLOYEES
 
 class employee
-    let public string firstname = "John"
+    public let string firstname = "John"
     public let lastname = "Doe"
-    int var private age = 18
+    var int  private age = 18
     var string[] attributes //When no access modifier is given, the variable will have private access
 end
 ```

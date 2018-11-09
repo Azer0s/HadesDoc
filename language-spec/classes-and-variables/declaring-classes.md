@@ -8,7 +8,7 @@
 with date from std:date
 
 class Member
-    private string var id
+    private var string id
     
     @public
         var firstname
