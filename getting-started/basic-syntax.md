@@ -46,11 +46,11 @@ end
 
 func sum(args int a)
     var result = 0
-    
+
     for(var i in a)
         result += i
     end
-    
+
     put result
 end
 
@@ -124,7 +124,7 @@ func doMath(int a)
     func square(b)
         put b * b
     end
-    
+
     put square(a) + root(a)
 end
 ```
@@ -238,6 +238,7 @@ var c = 0
 
 while(c not 10)
     console->out("c is {}"->format(c))
+    c++
 end
 ```
 
@@ -301,7 +302,7 @@ with client from mssql:client
 with console from std:io
 
 var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
-    
+
 try
     connection->open:
     console->out:"Connection open!"
@@ -363,6 +364,4 @@ so the execution call could look like:
 hades server.hd localhost 8080 -d true
 */
 ```
-
-
 
