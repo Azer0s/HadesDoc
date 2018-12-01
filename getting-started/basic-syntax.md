@@ -139,7 +139,7 @@ Variables can be assigned with the `=` operator.
 let string a = "Hello, World!" //Immediate assignment
 let b = "What's up?" //Type 'string' is inferred
 let string c //Type 'string' is given, but variable is not assigned
-let e //Type is inferred on first usage
+let d //Type is inferred on first usage
 ```
 
 ### Mutable local variables
@@ -148,7 +148,8 @@ let e //Type is inferred on first usage
 var string a = "Hello, World!" //Immediate assignment
 var b = "What's up?" //Type 'string' is inferred
 var string c //Type 'string' is given, but variable is not assigned
-var e //Type is inferred on first usage
+var d //Type is inferred on first usage
+var* e //Dynamic variable; can be anything, type can change
 ```
 
 ### Variables outside of functions

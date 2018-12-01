@@ -11,19 +11,20 @@ The Hades project initializer pretty much does what the name implies. It initial
 ### Initialize the project
 
 ```bash
-$ hades new demoproject.example.org
+$ hades new demoproject.example.org demo
 ```
 
 ### The project structure will look like this
 
 ```text
-project.json - Contains the project configuration, initial data (config, connection keys, etc...) and meta-data of libraries installed via Hermes.
-libs/ - Source files of libraries
-src/ - Upper most directory for source files
- org/ - Organization tld
-  example/ - Organization name
-   demoproject/ - Project name
-     main.hd - Entrypoint
+demo/ - Working name of the project
+ project.json - Contains the project configuration, initial data (config, connection keys, etc...) and meta-data of libraries installed via Hermes.
+ libs/ - Source files of libraries
+ src/ - Upper most directory for source files
+  org/ - Organization tld
+   example/ - Organization name
+    demoproject/ - Project name
+      main.hd - Entrypoint
 ```
 {% endtab %}
 
@@ -31,17 +32,18 @@ src/ - Upper most directory for source files
 ### Initialize the project
 
 ```bash
-$ hades new demoproject
+$ hades new demoproject demo
 ```
 
 ### The project structure will look like this
 
 ```text
-project.json - Contains the project configuration, initial data (config, connection keys, etc...) and meta-data of libraries installed via Hermes.
-libs/ - Source files of libraries
-src/ - Upper most directory for source files
- demoproject/ - Project name
-   main.hd - Entrypoint
+demo/ - Working name of the project
+ project.json - Contains the project configuration, initial data (config, connection keys, etc...) and meta-data of libraries installed via Hermes.
+ libs/ - Source files of libraries
+ src/ - Upper most directory for source files
+  demoproject/ - Project name
+    main.hd - Entrypoint
 ```
 {% endtab %}
 {% endtabs %}

@@ -6,6 +6,8 @@
 
 ### Immutable 
 
+### Dynamic
+
 ## Non-local variables
 
 ### In a class
@@ -19,10 +21,6 @@
 The access modifier annotate block can set the access specifier for multiple variables at a time. Access modifier blocks can only be used in classes and scripts.
 
 ### In a class
-
-```text
-
-```
 
 ### In a script
 
