@@ -19,7 +19,7 @@ We can test two values for equality:
 
 #### Example
 
-```javascript
+```swift
 1 == 2 //false
 "2" is "2" //true
 ```
@@ -28,7 +28,7 @@ And for inequality:
 
 #### Example
 
-```javascript
+```swift
 1 not 2 //true
 "2" != "2" //false
 ```
@@ -39,7 +39,7 @@ We can test different types for equality \(which will, by default, always evalua
 
 #### Example
 
-```javascript
+```swift
 314 == "pi" // false
 123 is "123" // false
 ```
@@ -48,8 +48,19 @@ And for inequality \(which will, by default, always evaluate to `true`\).
 
 #### Example
 
-```javascript
+```swift
 314 not "pi" // true
 123 != "123" // true
+```
+
+### Checking type
+
+In Hades, the equality operator also works as a typecheck. You can check any value against a proto or type. The operation will return `true` if the value is an instance of said proto.
+
+#### Example
+
+```swift
+123 == int
+v is Vector
 ```
 

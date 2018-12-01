@@ -5,35 +5,38 @@ All operator in Hades can be overloaded. The syntax for this is similar to overl
 ### Example
 
 ```swift
-class Couple
-    @public
-        var person1
-        var person2
+with console from std:io
+
+class Vector
+    var x = 0
+    var y = 0
+    var z = 0
+    
+    func Vector(x,y,z)
+        this->x = x
+        this->y = y
+        this->z = z
     end
     
-    func Couple(p1,p2)
-        person1 = p1
-        person2 = p2
+    func! toString()
+        put "{},{},{}"->format(x,y,z)
     end
-
+    
+    func! op+(v)
+        if(v is int)
+            put Vector(x+v,y+v,z+v)
+        else if(v is Vector)
+            put Vector(x + v->x, y + v->y, z + v->z)
+        end
+        
+        put null
+    end
 end
 
-class Person
-    @public
-        var string name
-        var gender
-    end
-    
-    func Person(name, gender)
-        this->name = name
-        this->gender = gender
-    end
-    
-    func! op+(person1, person2) //Overloads the operator +
-        put Couple(person1, person2)
-    end
-end
+var v1 = Vector(1,2,3)
+var v2 = Vector(4,5,6)
 
-Person("John Doe", "M") + Person("Jane Doe", "F") //Returns a couple object
+var v3 = v1 + v2 //overloaded operator is called
+console->out:v3 //outputs: 5,7,9
 ```
 
