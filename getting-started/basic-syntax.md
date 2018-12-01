@@ -73,10 +73,10 @@ When a function only has one or no parameter and nothing follows after the funct
 
 ```swift
 console->out:"Hello, World!" //✔️
-connection->open: //✔️, but can also be written as connection->open()
 fib:10 //✔️
-fib:10 + fib:11 //This can also be written as fib(10 + fib(11))
+fib:10 + fib:11 //✔️, this can also be written as fib(10 + fib(11))
 add:10,10 //❌, because two parameters are given
+connection->open: //❌, but can also be written as connection->open()
 ```
 
 ### Function guards
@@ -303,9 +303,9 @@ with console from std:io
 var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
 
 try
-    connection->open:
+    connection->open()
     console->out:"Connection open!"
-    connection->close:
+    connection->close()
 catch(SqlException e)
     console->out:"SqlException was caught!"
 catch(default e)

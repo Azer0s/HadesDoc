@@ -68,7 +68,7 @@ Since every simple data type has a default value, per default you can not assign
 
 ```swift
 var int? a = null
-string? var b = null
+var string? b = null
 ```
 
 ## Arrays

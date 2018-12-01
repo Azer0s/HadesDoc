@@ -18,9 +18,9 @@ with file from std:io
 var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
     
 try
-    connection->open:
+    connection->open()
     console->out:"Connection opened!"
-    connection->close:
+    connection->close()
 catch(SqlException e) //here, an SqlException is caught
     console->out:"SqlException was caught!"
 catch(default e) //in the case that any other exception was raised, this block is invoked
@@ -50,7 +50,11 @@ var number
 
 try
     number = int(console->in())
-    
+catch(default e)
+    console->out:"Could not parse number"
+else
+    console->out:"Number is {}"->format(number)
+end
 ```
 
 ## `raise` statement
