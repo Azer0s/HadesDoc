@@ -1,6 +1,6 @@
 # Operator overloading
 
-All operator in Hades can be overloaded. The syntax for this is similar to overloading an inherited function.
+All operator in Hades can be overloaded. The syntax for this is similar to overloading an inherited function. Operator overloading in Hades always assumes a right operation so the base for the operation is always the parameter on the left.
 
 ### Example
 
@@ -36,7 +36,7 @@ end
 var v1 = Vector(1,2,3)
 var v2 = Vector(4,5,6)
 
-var v3 = v1 + v2 //overloaded operator is called
+var v3 = v1 + v2 //overloaded operator is called on v1
 console->out:v3 //outputs: 5,7,9
 ```
 
