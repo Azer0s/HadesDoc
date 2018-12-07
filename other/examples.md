@@ -34,23 +34,37 @@ with Int fixed from std:int
 fib->calculate:parse(value=console->in(),raise=false,defaultValue=0)
 ```
 
-## 99 bottles of beer
+## Perceptron
 
-### main.hd
+```swift
+let dec[*] points = 
+{
+    {245,1400},
+    {312, 1600},
+    {279, 1700},
+    {308, 1875},
+    {199, 1100},
+    {219, 1550},
+    {405, 2350},
+    {324, 2450},
+    {319, 1425},
+    {255, 1700}
+}
 
-```javascript
-with math from std:math
+var weight = 10.0
+var bias = 100.0
+var lr = 0.000001
 
-for(var i in math->range(99,3))
-    out:"{} bottles of beer on the wall, {} bottles of beer\nTake one down and pass it around, {} bottles of beer on the wall."->format(i,i,i-1)
+for(_ in range(1000000))
+    for(var point in points)
+        var prediction = point[0] * weight + bias
+        var error = point[1] - prediction
+        var gradient = point[0] * error * lr
+
+        bias = bias + gradient
+        weight = weight + weight * gradient
+    end
 end
-
-out("""
-1 bottle of beer on the wall, 1 bottle of beer.
-Take one down and pass it around, no more bottles of beer on the wall.
-No more bottles of beer on the wall, no more bottles of beer.
-Go to the store and buy some more, 99 bottles of beer on the wall.
-""")
 ```
 
 ## Factorial
