@@ -39,7 +39,7 @@ fib->calculate:parse(value=console->in(),raise=false,defaultValue=0)
 ```swift
 let dec[*] points = 
 {
-    {245,1400},
+    {245, 1400},
     {312, 1600},
     {279, 1700},
     {308, 1875},
