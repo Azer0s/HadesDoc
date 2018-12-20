@@ -21,6 +21,14 @@ for(var fruit in fruits)
 end
 ```
 
+If you don't need a variable, you can use an underscore instead of naming a variable or variable declaration.
+
+```javascript
+for(_ in range(0,10))
+    console->out:""
+end
+```
+
 ## `while` loop
 
 The `while` loop pretty much works like you'd expect. It loops as long as a given condition evaluates to `true`.
