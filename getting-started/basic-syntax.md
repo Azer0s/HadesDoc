@@ -74,7 +74,7 @@ When a function only has one or no parameter and nothing follows after the funct
 ```swift
 console->out:"Hello, World!" //✔️
 fib:10 //✔️
-fib:10 + fib:11 //✔️, this can also be written as fib(10 + fib(11))
+fib:10 + fib:11 //⚠️, this can also be written as fib(10 + fib(11))
 add:10,10 //❌, because two parameters are given
 connection->open: //❌, but can also be written as connection->open()
 ```
