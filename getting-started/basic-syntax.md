@@ -38,12 +38,6 @@ Varargs allow for method invocation with multiple parameters which are treated a
 ```swift
 with console from std:io
 
-func print(args a)
-    for(var arg in a)
-        console->out:arg
-    end
-end
-
 func sum(args int a)
     var result = 0
 
@@ -54,7 +48,13 @@ func sum(args int a)
     put result
 end
 
-func printMultiple(args a, int times)
+func print(args a)
+    for(var arg in a)
+        console->out:arg
+    end
+end
+
+func print(args a, int times)
     for(var i in range(1,times))
         for(var arg in a)
             console->out:arg
@@ -62,9 +62,9 @@ func printMultiple(args a, int times)
     end
 end
 
-print("Hello",",","world") //Output: Hello\n,\nworld
-console->out:sum(1,2,3,4,5,6,7,8,9) //Output: 45
-printMultiple("Hello",",","world",5/*this is the 'times' parameter*/) //Will output 'Hello\n,\nworld' 5 times
+console->out:sum(1, 2, 3, 4, 5, 6, 7, 8, 9)
+print("Hello", ",", "world")
+print("Hello", "," ,"world", 5/*this is the 'times' parameter*/)
 ```
 
 ### Omitting braces
