@@ -26,12 +26,12 @@ let string[*] text = console->in()->split(" ")
 
 ## Declaring multi-dimensional arrays
 
-The syntax of creating multi-dimensional arrays is similar to that of creating one-dimensional arrays. But instead of a single size, you put the size of each dimension between the brackets seperated by a `.` .
+The syntax of creating multi-dimensional arrays is similar to that of creating one-dimensional arrays. But instead of a single size, you put the size of each dimension between the brackets seperated by a `,` .
 
 ### Example
 
 ```swift
-var int[3.3] matrix = {{1,0,0},{0,1,0},{0,0,1}}
+var int[3,3] matrix = {{1,0,0},{0,1,0},{0,0,1}}
 
 var names = {{"John", "Greg"}, {"Anna", "Susan"}} //type of the array is infered here, names is now a string[2.2]
 
@@ -45,7 +45,7 @@ Making an array nullable is done in the same way as making a variable nullable: 
 ### Example
 
 ```swift
-var int?[2.2.2] 3dArray = {{{1,2},{3,null}},{{null,6},{7,8}}}
+var int?[2,2,2] 3dArray = {{{1,2},{3,null}},{{null,6},{7,8}}}
 
 var strings = {null, "Hello","World"} //type of the array is infered here, strings is now a string?[3]
 ```

@@ -63,6 +63,7 @@
         * [findMethodsInProto](core-libraries/standard-library/internals/annotations/findmethodsinproto.md)
       * [function](core-libraries/standard-library/internals/function.md)
     * [std:collections](core-libraries/standard-library/list/README.md)
+      * [Map](core-libraries/standard-library/list/map.md)
       * [list](core-libraries/standard-library/list/list.md)
     * [std:math](core-libraries/standard-library/math/README.md)
       * [math](core-libraries/standard-library/math/math.md)
