@@ -166,6 +166,14 @@ Child()->talk() //Outputs: I am male
 */
 ```
 
+## Super
+
+If you still want to make the code from the example above work, you need to call the method on Mother explicitly. The built-in super function allows you to do exactly that.
+
+```swift
+Child()->super(Mother)->talk()
+```
+
 ## Overriding inherited members
 
 To override a function, use the `func!` keyword. This overrides functions and functions groups with function guards.

@@ -1,6 +1,6 @@
 # Built-in functions
 
-Every variable or constant \(simple or complex\) have built-in functions. They can be accessed like any other function even on a literal. Every built-in function can be [overriden](../functions-and-lambdas/declaring-functions.md#overriding-built-in-functions).
+Every variable or constant \(simple or complex\) has built-in functions. They can be accessed like any other function even on a literal. Every built-in function can be [overriden](../functions-and-lambdas/declaring-functions.md#overriding-built-in-functions).
 
 ## nameof
 

@@ -10,7 +10,7 @@ An object is the native return type of a proto. It is created when a class is in
 
 ### struct
 
-Structs can have variables, stored in them. They can not contain functions \(however, they can contain lambdas\) or a constructor. They're constructed sequentially \(constructor parameters are passed in, in the same sequence the variables are defined in the struct\).
+Structs can have variables, stored in them. They can not contain functions \(however, they can contain lambdas\) or user-defined constructors. They're constructed sequentially \(constructor parameters are passed in, in the same sequence the variables are defined in the struct\).
 
 A struct is declared like a block. Every variable declared in a struct is public.
 
@@ -56,13 +56,13 @@ The bool \(named after George Boole\) can store a single bit represented by the 
 | Datatype | Range | Default Value |
 | :--- | :--- | :--- |
 | int | -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807 | 0 |
-| string | 0 to 1,073,741,824 characters |  |
+| string | 0 to 1,073,741,824 characters | "" |
 | dec | -79,228,162,514,264,337,593,543,950,335.0 to 79,228,162,514,264,337,593,543,950,335.0 | 0.0 |
 | bool | false or true | false |
 
 ## Nullable simple data types
 
-Since every simple data type has a default value, per default you can not assign null to a variable with a simple datatype. If you want to make a variable of a simple data type nullable, you have to explicitly declare said variable as nullable. This can be done with appending a `?` after the data type of the variable.
+Since every simple data type has a default value, per default you can not assign null to a variable with a simple datatype. If you want to make a variable of a simple data type nullable, you have to explicitly declare said variable as nullable. This can be done with appending a `?` after the data type of the variable. A constant variable cannot be nullable.
 
 #### Examples
 

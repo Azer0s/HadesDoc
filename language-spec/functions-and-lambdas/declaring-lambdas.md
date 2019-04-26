@@ -41,6 +41,6 @@ If no parameter is needed, an `_` is used as the parameter name, instead.
 ```javascript
 with console from std:io
 var hello = { _ => console->out:"Hello, world!" }
-hello:
+hello()
 ```
 
