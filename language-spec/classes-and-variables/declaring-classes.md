@@ -36,11 +36,11 @@ A class without a constructor can still be instantiated. In the following exampl
 
 ```swift
 class Calculator
-    fixed func add(a,b)
+    func fixed add(a,b)
         put a + b
     end
     
-    fixed func sub(a,b)
+    func fixed sub(a,b)
         put a - b
     end
 end
@@ -56,7 +56,7 @@ A class marked fixed can not be instantiated. All functions or structs declared 
 ### Example
 
 ```swift
-fixed class Calculator
+class fixed Calculator
     class Adder
         func add(a,b)
             put a + b
