@@ -72,4 +72,5 @@
 * [ ] **Other**
   * [x] \*\*\*\*[**Tools**](tools.md)\*\*\*\*
   * [ ] \*\*\*\*[**Examples**](examples.md)\*\*\*\*
+  * [ ] **Hades Shell \(HaSh\) ???**
 

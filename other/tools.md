@@ -7,6 +7,25 @@ The Hades project initializer pretty much does what the name implies. It initial
 ### Example
 
 {% tabs %}
+{% tab title="Create without organization name" %}
+### Initialize the project
+
+```bash
+$ hades new demoproject demo
+```
+
+### The project structure will look like this
+
+```text
+demo/ - Working name of the project
+ project.json - Contains the project configuration, initial data (config, connection keys, etc...) and meta-data of libraries installed via Hermes.
+ libs/ - Source files of libraries
+ src/ - Upper most directory for source files
+  demoproject/ - Project name
+    main.hd - Entrypoint
+```
+{% endtab %}
+
 {% tab title="Create with organization name" %}
 ### Initialize the project
 
@@ -25,25 +44,6 @@ demo/ - Working name of the project
    example/ - Organization name
     demoproject/ - Project name
       main.hd - Entrypoint
-```
-{% endtab %}
-
-{% tab title="Create without organization name" %}
-### Initialize the project
-
-```bash
-$ hades new demoproject demo
-```
-
-### The project structure will look like this
-
-```text
-demo/ - Working name of the project
- project.json - Contains the project configuration, initial data (config, connection keys, etc...) and meta-data of libraries installed via Hermes.
- libs/ - Source files of libraries
- src/ - Upper most directory for source files
-  demoproject/ - Project name
-    main.hd - Entrypoint
 ```
 {% endtab %}
 {% endtabs %}
