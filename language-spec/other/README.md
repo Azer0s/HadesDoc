@@ -5,7 +5,7 @@
 * [Annotations](annotations.md)
 * [C\# interop](c-interop.md)
 * [Comments](comments.md)
-* [Omitting braces](omitting-braces.md)
+* [Omitting braces]()
 * [Preprocessor statements](preprocessor-statements.md)
 * [Reflection](reflection.md)
 * [Script file arguments](script-file-arguments.md)

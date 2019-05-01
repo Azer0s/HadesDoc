@@ -20,7 +20,7 @@ with console from std:io
 
 #myMethod()
 func method1(x)
-    out:"Hello from method1 (invoked by {})"->format(x)
+    out("Hello from method1 (invoked by {})"->format(x))
 end
 ```
 

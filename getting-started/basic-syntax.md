@@ -4,7 +4,7 @@
 
 ```javascript
 with console from std:io
-console->out:"Hello world"
+console->out("Hello world")
 ```
 
 ## Defining functions
@@ -50,33 +50,21 @@ end
 
 func print(args a)
     for(var arg in a)
-        console->out:arg
+        console->out(arg)
     end
 end
 
 func print(args a, int times)
     for(var i in range(1,times))
         for(var arg in a)
-            console->out:arg
+            console->out(arg)
         end
     end
 end
 
-console->out:sum(1, 2, 3, 4, 5, 6, 7, 8, 9)
+console->out(sum(1, 2, 3, 4, 5, 6, 7, 8, 9))
 print("Hello", ",", "world")
 print("Hello", "," ,"world", 5/*this is the 'times' parameter*/)
-```
-
-### Omitting braces
-
-When a function only has one or no parameter and nothing follows after the function call, the braces can be omitted and the function can be called like so:
-
-```swift
-console->out:"Hello, World!" //✔️
-fib:10 //✔️
-fib:10 + fib:11 //⚠️, this is equivalent to fib(10 + fib(11))
-add:10,10 //❌, because two parameters are given
-connection->open: //❌, but can also be written as connection->open()
 ```
 
 ### Function guards
@@ -87,26 +75,26 @@ With function guards, an initial condition has to be fulfilled for the function 
 with console from std:io
 
 func myFunction(int a) requires a < 10
-    console->out:"a is smaller than 10"
+    console->out("a is smaller than 10")
 end
 
 func myFunction(int a) requires a is 11
-    console->out:"a is 11"
+    console->out("a is 11")
 end
 
 func myFunction(int a) requires a > 11 and a < 21
-    console->out:"a is greater than 11 and smaller than 21"
+    console->out("a is greater than 11 and smaller than 21")
 end
 
 func myFunction(int a)
     //This default function is called when every condition is false
-    console->out:"a is " + a
+    console->out("a is " + a)
 end
 
-myFunction:1  //Output: a is smaller than 10
-myFunction:11 //Output: a is 11
-myFunction:15 //Output: a is greater than 11 and smaller than 21
-myFunction:50 //Output: a is 50
+myFunction(1)  //Output: a is smaller than 10
+myFunction(11) //Output: a is 11
+myFunction(15) //Output: a is greater than 11 and smaller than 21
+myFunction(50) //Output: a is 50
 ```
 
 ### Nested functions
@@ -200,13 +188,13 @@ An if statement can contain n `else if` blocks and one `else` block.
 with console from std:io
 
 if(a < 10)
-    console->out:"a is smaller than 10"
+    console->out("a is smaller than 10")
 else if(a is 11)
-    console->out:"a is 11"
+    console->out("a is 11")
 else if(a > 11 and a < 21)
-    console->out:"a is greater than 11 and smaller than 21"
+    console->out("a is greater than 11 and smaller than 21")
 else
-    console->out:"a is " + a
+    console->out("a is " + a)
 end
 ```
 
@@ -219,7 +207,7 @@ with math fixed from std:math
 with console from std:io
 
 for(var int i in range(0,10) /*'range' returns an array with the number 0 to 10*/)
-    console->out:i
+    console->out(i)
 end
 
 let string[] fruits = {"Apple", "Banana", "Mango", "Kiwi"}
@@ -276,14 +264,14 @@ var lambda action = { _ =>
 }
 
 match(fruit) to
-    "Apple" => { _ => console->out:"Apples are really tasty!"}
+    "Apple" => { _ => console->out("Apples are really tasty!")}
     fruit->type() is "string" => action
 end
 
 //Output: Apples are really tasty!
 
 match(fruit) to multiple
-    "Apple" => { _ => console->out:"Apples are really tasty!"}
+    "Apple" => { _ => console->out("Apples are really tasty!")}
     fruit->type() is "string" => action
 end
 
@@ -304,12 +292,12 @@ var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseN
 
 try
     connection->open()
-    console->out:"Connection open!"
+    console->out("Connection open!")
     connection->close()
 catch(object::SqlException e)
-    console->out:"SqlException was caught!"
+    console->out("SqlException was caught!")
 catch(e)
-    console->out:"An unknown exception was caught!"
+    console->out("An unknown exception was caught!")
 end
 ```
 
@@ -338,12 +326,12 @@ fruits
 
 //As opposed to
 
-forEach({x => console->out:x}, filter({x => x->startsWith("a")}, map({x => x->toLower()}, fruits)))
+forEach({x => console->out(x)}, filter({x => x->startsWith("a")}, map({x => x->toLower()}, fruits)))
 //map(lambda, list), filter(lambda, list) and forEach(lambda, list) are static methods from the list class
 
 //Or even
 
-fruits->map({x => x->toLower()})->filter({x => x->startsWith("a")})->forEach({x => console->out:x})
+fruits->map({x => x->toLower()})->filter({x => x->startsWith("a")})->forEach({x => console->out(x)})
 //map(lambda), filter(lambda) and forEach(lambda) are methods from the list class
 ```
 
@@ -384,7 +372,7 @@ var v1 = Vector(1,2,3)
 var v2 = Vector(4,5,6)
 
 var v3 = v1 + v2 //overloaded operator is called
-console->out:v3 //outputs: 5,7,9
+console->out(v3) //outputs: 5,7,9
 ```
 
 ## Script file arguments

@@ -47,7 +47,7 @@ var fruits = list->of({"Apple", "Banana", "Mango", "Kiwi", "Avocado"})
 fruits
 |> map({x => x->toLower()}, ??)
 |> filter({x => x->startsWith("a")}, ??)
-|> forEach({x => console->out:x}, ??)
+|> forEach({x => console->out(x)}, ??)
 
 /*
 Output:

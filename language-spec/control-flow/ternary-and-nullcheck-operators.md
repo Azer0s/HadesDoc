@@ -35,7 +35,7 @@ var doStuff = { x =>
 try
     doStuff(null)
 catch(default e)
-    console->out:e->message
+    console->out(e->message)
 end
 
 //Output: x is null

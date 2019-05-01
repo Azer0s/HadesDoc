@@ -41,7 +41,7 @@ listCommand = "dir"
 %else if eq OS Linux%
 listCommand = "ls"
 %else%
-console->out:"OS not recognized!"
+console->out("OS not recognized!")
 os->exit(-1)
 &fi%
 
@@ -61,7 +61,7 @@ The import statement copies the content of the specified file and pastes it into
 ```swift
 func print(args a)
     for(var arg in a)
-        console->out:arg
+        console->out(arg)
     end
 end
 ```
@@ -94,7 +94,7 @@ with console from std:io
 class printer
     func print(args a)
         for(var arg in a)
-            console->out:arg
+            console->out(arg)
         end
     end
 end

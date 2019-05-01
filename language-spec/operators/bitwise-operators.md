@@ -9,7 +9,7 @@ The left-shift operator causes the bits in the left value \(either a variable or
 ```javascript
 with console from std:io
 var a = 20 << 2
-console->out:a //Output: 80
+console->out(a) //Output: 80
 ```
 
 ## Right shift
@@ -21,7 +21,7 @@ The right-shift operator causes the bits in the left value \(either a variable o
 ```javascript
 with console from std:io
 var a = 8 >> 2
-console->out:a //Output: 2
+console->out(a) //Output: 2
 ```
 
 ## Bitwise and
@@ -36,7 +36,7 @@ with console from std:io
 var a = 12 //00001100 in binary
 var b = 25 //00011001 in binary
 
-console->out:a&b //Output: 8
+console->out(a&b) //Output: 8
 ```
 
 ## Bitwise or
@@ -51,7 +51,7 @@ with console from std:io
 var a = 12
 var b = 25
 
-console->out:a|b //Output: 29
+console->out(a|b) //Output: 29
 ```
 
 ## Bitwise xor
@@ -66,7 +66,7 @@ with console from std:io
 var a = 12
 var b = 25
 
-console->out:a^b //Output: 21
+console->out(a^b) //Output: 21
 ```
 
 ## One's complement
@@ -80,7 +80,7 @@ with console from std:io
 
 var a = 35 //00100011 in binary
 
-console->out:~a //Output: 220
+console->out(~a) //Output: 220
 ```
 
 

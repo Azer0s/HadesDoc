@@ -10,7 +10,7 @@ A one dimensional fixed array is created either via an array literal or via appe
 with console from std:io
 
 var hello = {"Hello","world"} //type of the array is infered here, fooBar is now a string[2]
-console->out:hello [0] + hello [1] //Output: Hello world
+console->out(hello [0] + hello [1]) //Output: Hello world
 
 var fooBar
 fooBar[0] = 10 //type of the array is infered here, fooBar is now an int[*]

@@ -1,6 +1,6 @@
 # Exception handling
 
-## Exceptions in Hades
+Exceptions in Hades
 
 In Hades, everything can be an exception. There is a collection of standard exceptions \(in `std:exceptions`\) but nothing prevents you from throwing any object as an exception. This comes in quite handy when you want to handle multiple exceptions with very different error sources. 
 
@@ -20,12 +20,12 @@ var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseN
     
 try
     connection->open()
-    console->out:"Connection opened!"
+    console->out("Connection opened!")
     connection->close()
 catch(object::SqlException e) //here, an SqlException is caught
-    console->out:"SqlException was caught!"
+    console->out("SqlException was caught!")
 catch(e) //in the case that any other exception was raised, this block is invoked
-    console->out:"An unknown exception was caught!"
+    console->out("An unknown exception was caught!")
 end
 
 try
@@ -71,9 +71,9 @@ var number
 try
     number = int(console->in())
 catch(e)
-    console->out:"Could not parse number"
+    console->out("Could not parse number")
 else
-    console->out:"Number is {}"->format(number)
+    console->out("Number is {}"->format(number))
 end
 ```
 

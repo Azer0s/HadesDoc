@@ -56,7 +56,7 @@ A class marked fixed can not be instantiated. All functions or structs declared 
 ### Example
 
 ```swift
-class fixed Calculator
+fixed class Calculator
     class Adder
         func add(a,b)
             put a + b
@@ -86,7 +86,7 @@ with console fixed from std:io
 class outerClass
     class innerClass
         func innerClass()
-            out:"Hello from inner class"
+            out("Hello from inner class")
         end
     end
 end
@@ -127,13 +127,13 @@ with console fixed from std:io
 
 class Mother
     func talk()
-        out:"I am female"
+        out("I am female")
     end
 end
 
 class Father
     func talk()
-        out:"I am male"
+        out("I am male")
     end
 end
 ```
@@ -185,7 +185,7 @@ with console fixed from
 
 class OverrideChild < Father
     func! talk()
-        out:"I am a child"
+        out("I am a child")
     end
 end
 

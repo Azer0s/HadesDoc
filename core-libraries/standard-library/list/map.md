@@ -2,7 +2,7 @@
 description: 'Maps keys to values, no fancy magic.'
 ---
 
-# Map
+# map
 
 ### Examples
 

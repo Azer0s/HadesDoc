@@ -10,13 +10,13 @@ The `if` statement executes statements based on some conditions.
 with console from std:io
 
 if(a < 10)
-    console->out:"a is smaller than 10"
+    console->out("a is smaller than 10")
 else if(a is 11)
-    console->out:"a is 11"
+    console->out("a is 11")
 else if(a > 11 and a < 21)
-    console->out:"a is greater than 11 and smaller than 21"
+    console->out("a is greater than 11 and smaller than 21")
 else
-    console->out:"a is " + a
+    console->out("a is " + a)
 end
 ```
 
@@ -28,13 +28,13 @@ An `if` block can contain multiple `else if` block.
 with console from std:io
 
 if(condition)
-    console->out:"yes"
+    console->out("yes")
 else if(otherCondition)
-    console->out:"maybe"
+    console->out("maybe")
 else if(otherOtherCondition)
-    console->out:"maybe not"
+    console->out("maybe not")
 else
-    console->out:"no"
+    console->out("no")
 end
 ```
 
@@ -53,14 +53,14 @@ var lambda action = { _ =>
 }
 
 match(fruit) to
-    "Apple" => { _ => console->out:"Apples are really tasty!"}
+    "Apple" => { _ => console->out("Apples are really tasty!")}
     fruit->type() is "string" => action
 end
 
 //Output: Apples are really tasty!
 
 match(fruit) to multiple
-    "Apple" => { _ => console->out:"Apples are really tasty!"}
+    "Apple" => { _ => console->out("Apples are really tasty!")}
     fruit->type() is "string" => action
 end
 

@@ -178,10 +178,10 @@ var fruit = "Apple"
 
 match(fruit) to multiple
     "Apple" => { _ =>
-        console->out:"Apples are really tasty!"
-        console->out:"I like apples!"
+        console->out("Apples are really tasty!")
+        console->out("I like apples!")
     }
-    fruit->type() is "string" => { _ => console->out:"Variable is a string"} //Simple lambda
+    fruit->type() is "string" => { _ => console->out("Variable is a string")} //Simple lambda
 end
 ```
 
@@ -196,7 +196,7 @@ func filterAndPrint(fruits, filterBy="a")
     list->of(fruits)
     |> map({x => x->toLower()}, ??)
     |> filter({x => x->startsWith(filterBy)}, ??)
-    |> forEach({x => console->out:x}, ??)
+    |> forEach({x => console->out(x)}, ??)
 end
 
 {"Apple", "Banana", "Mango", "Kiwi", "Avocado"}
@@ -219,7 +219,7 @@ with file from std:io
 
 try
     file->read("hello.txt")
-catch(default e)
+catch(e)
     //ignored
 end
 ```
