@@ -16,7 +16,7 @@ The method returns an `object(annotationResult)`.
 ### myScript.hd
 
 ```swift
-with console from std:io
+with console fixed from std:io
 
 #myMethod()
 func method1(x)

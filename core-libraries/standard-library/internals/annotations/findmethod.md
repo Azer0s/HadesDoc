@@ -13,7 +13,7 @@ The method returns an `object(annotationResult)`.
 ## Example
 
 ```swift
-with console from std:io
+with console fixed from std:io
 with annotations from std:internals
 
 #myMethod()
