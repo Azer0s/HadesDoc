@@ -74,7 +74,7 @@ end
 ```javascript
 with console from std:io
 
-var factorial = { x => x >= 1 ? x * factorial(x-1) : 1 }
+var factorial = { x => (x >= 1) ? x * factorial(x-1) : 1 }
 console->out(factorial(6))
 ```
 
