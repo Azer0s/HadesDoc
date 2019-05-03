@@ -19,7 +19,7 @@ end
 
 {% tab title="With a lambda" %}
 ```javascript
-var calculate = { x => (x == 0) or (x == 1) ? x : calculate(x-1) + calculate(x-2) }
+var calculate = { x => ((x == 0) or (x == 1)) ? x : calculate(x-1) + calculate(x-2) }
 ```
 {% endtab %}
 {% endtabs %}
