@@ -40,7 +40,7 @@ end
 
 ## `match` block
 
-The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. If multiple match cases evaluate to true, the first match case is invoked, except if specified otherwise \(with `to multiple`\).
+The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. By default every block that matches is invoked. If the desired behavior is instead to only invoke the first matching block, use `match first`.
 
 ### Example
 
@@ -52,14 +52,7 @@ var lambda action = { _ =>
     console->print("Variable is of type string")
 }
 
-match(fruit) to
-    "Apple" => { _ => console->out("Apples are really tasty!")}
-    fruit->type() is "string" => action
-end
-
-//Output: Apples are really tasty!
-
-match(fruit) to multiple
+match(fruit)
     "Apple" => { _ => console->out("Apples are really tasty!")}
     fruit->type() is "string" => action
 end
@@ -69,5 +62,12 @@ Output:
 Apples are really tasty!
 Variable is of type string
 */
+
+match first(fruit)
+    "Apple" => { _ => console->out("Apples are really tasty!")}
+    fruit->type() is "string" => action
+end
+
+//Output: Apples are really tasty!
 ```
 

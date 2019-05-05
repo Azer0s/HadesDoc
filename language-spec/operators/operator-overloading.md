@@ -40,3 +40,38 @@ var v3 = v1 + v2 //overloaded operator is called on v1
 console->out(v3) //outputs: 5,7,9
 ```
 
+## Index operator overloading
+
+One special case of operator overloading is when you want to overload the index operator `[]`. 
+
+There are two functions that can be overwritten: 
+
+* reading from an index: `index(args indices)`
+* writing to an index: `index(args indicies, newValue)`
+
+### Example
+
+```swift
+class MyWayCoolerMapImplementation
+    private let map = Map()
+    
+    func! index(args indices)
+        if (indices->length is 1)
+            let index = indices[0]
+            put map->get(index)
+        end
+        
+        raise ArgumentError()
+    end
+    
+    func! index(args indices, newValue)
+        if (indices->length is 1)
+            let index = indices[0]
+            map->put(index, newValue)
+        end
+        
+        raise ArgumentError()
+    end
+end
+```
+

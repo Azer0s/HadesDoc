@@ -263,14 +263,7 @@ var lambda action = { _ =>
     console->print("Variable is of type string")
 }
 
-match(fruit) to
-    "Apple" => { _ => console->out("Apples are really tasty!")}
-    fruit->type() is "string" => action
-end
-
-//Output: Apples are really tasty!
-
-match(fruit) to multiple
+match(fruit)
     "Apple" => { _ => console->out("Apples are really tasty!")}
     fruit->type() is "string" => action
 end
@@ -280,6 +273,13 @@ Output:
 Apples are really tasty!
 Variable is of type string
 */
+
+match first(fruit)
+    "Apple" => { _ => console->out("Apples are really tasty!")}
+    fruit->type() is "string" => action
+end
+
+//Output: Apples are really tasty!
 ```
 
 ### Exception handling

@@ -36,11 +36,11 @@ A class without a constructor can still be instantiated. In the following exampl
 
 ```swift
 class Calculator
-    func fixed add(a,b)
+    fixed func add(a,b)
         put a + b
     end
     
-    func fixed sub(a,b)
+    fixed func sub(a,b)
         put a - b
     end
 end

@@ -16,6 +16,8 @@ Some variables are set by the Hades interpreter.
 | OS | The operating system, a script is being ran on \(can be: NT, Mac, Linux, Other\) |
 | OS\_VERSION | The version of the operating system as int \(417, 1803, 10136, etc...\) |
 | HADES\_VERSION | The version of the Hades interpreter the script is being ran on as int |
+| HAS\_EVAL | 1 if the Hades runtime has the `eval` function, 0 if not |
+| HAS\_INTERNALS | 1 if the Hades runtime has the `std:internals` library, 0 if not |
 
 ## `if-else if-fi` statement
 

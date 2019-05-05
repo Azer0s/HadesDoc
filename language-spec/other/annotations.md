@@ -1,6 +1,6 @@
 # Annotations
 
-Methods, classes, structs and class-variables can be annotated. Annotations do not have to be declared. Multiple annotations can be used.
+Methods, classes, structs and class-variables can be annotated with `#`. Annotations do not have to be declared. Multiple annotations can be used. An annotation can have a single value of any type.
 
 ```swift
 with UserRepository //automatically imports from the first file that matches UserRepository\.hd (case insensitive)

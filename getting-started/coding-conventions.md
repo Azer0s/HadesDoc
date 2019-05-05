@@ -176,7 +176,7 @@ Same for match:
 ```javascript
 var fruit = "Apple"
 
-match(fruit) to multiple
+match(fruit)
     "Apple" => { _ =>
         console->out("Apples are really tasty!")
         console->out("I like apples!")
