@@ -145,22 +145,20 @@ var* e //Dynamic variable; can be anything, type can change
 Variables outside of functions \(either in script files or class definitions\) can name an access modifier.
 
 ```csharp
-global  //Accessible from everywhere
+protected //Accessible from all inherited members
 public  //Accessible over direct access
 private //Not accessible from outside
 ```
 
-When defining a global variable with the name of another global variable that already exists, the variable will not be defined and the assignment will not be executed.
-
 #### Examples:
 
 ```swift
-object[] global var EMPLOYEES
+object[] var EMPLOYEES
 
 class employee
     public let string firstname = "John"
     public let lastname = "Doe"
-    var int  private age = 18
+    private var int age = 18
     var string[] attributes //When no access modifier is given, the variable will have private access
 end
 ```
