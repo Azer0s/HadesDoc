@@ -74,23 +74,7 @@ src/ - Upper most directory for source files
 
 ## Naming rules
 
-Most things in Hades follow [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase), except for global variables and preprocessor variables which are uppercase and underscore separated and native libraries which are named like so: `native library name : library file`. Classes, constructors and struct names follow [PascalCase](https://wiki.c2.com/?PascalCase) while proto names are in [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase).
-
-### Global variables
-
-```csharp
-//In a global annotation block
-@global
-    var string API_KEY = "1fea971e-55e3-4ce2-a5a4-6057388a7809"
-    var SESSION_USER
-    var SESSION_PASSWORD
-    var SESSION_PASSWORD_HASH
-end
-
-//As standalone
-let global string VERSION_NUMBER = "0.7.1"
-global var int HIGH_SCORE = 0
-```
+Most things in Hades follow [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase), except for preprocessor variables which are uppercase and underscore separated, and native libraries which are named like so: `native library name : library file`. Classes, constructors and struct names follow [PascalCase](https://wiki.c2.com/?PascalCase) while proto names are in [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase).
 
 ### Preprocessor variables
 
