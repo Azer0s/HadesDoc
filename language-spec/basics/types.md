@@ -32,6 +32,16 @@ Like a function, a lambda can contain other function, class or struct definition
 
 **See:** [Declaring lambdas](../functions-and-lambdas/declaring-lambdas.md)
 
+### atom
+
+An atom is a constant whose value is its name. They can be used to express certain operation states like `:ok` or  `:error`.
+
+An atom is declared like so `:name`.
+
+### pid
+
+A pid or process id is a reference to another thread. You can obtain the pid by either spawning a process or calling `self()`.
+
 ## Simple data types
 
 ### int

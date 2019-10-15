@@ -30,6 +30,8 @@
     * [Declaring arrays](language-spec/classes-and-variables/declaring-arrays.md)
     * [Working with objects](language-spec/classes-and-variables/working-with-objects.md)
     * [Type conversions in simple variable types](language-spec/classes-and-variables/type-conversions-in-simple-variable-types.md)
+  * [Actors](language-spec/actors/README.md)
+    * [Message passing](language-spec/actors/message-passing.md)
   * [Functions and lambdas](language-spec/functions-and-lambdas/README.md)
     * [Declaring functions](language-spec/functions-and-lambdas/declaring-functions.md)
     * [Declaring lambdas](language-spec/functions-and-lambdas/declaring-lambdas.md)

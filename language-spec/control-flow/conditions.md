@@ -40,7 +40,7 @@ end
 
 ## `match` block
 
-The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. By default every block that matches is invoked. If the desired behavior is instead to only invoke the first matching block, use `match first`.
+The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. By default only the first block that matches is invoked. If the desired behavior is instead to invoke all matching blocks, use `match`.
 
 ### Example
 
@@ -52,7 +52,7 @@ var lambda action = { _ =>
     console->print("Variable is of type string")
 }
 
-match(fruit)
+match all(fruit)
     "Apple" => { _ => console->out("Apples are really tasty!")}
     fruit->type() is "string" => action
 end
@@ -63,11 +63,25 @@ Apples are really tasty!
 Variable is of type string
 */
 
-match first(fruit)
+match(fruit)
     "Apple" => { _ => console->out("Apples are really tasty!")}
     fruit->type() is "string" => action
 end
 
 //Output: Apples are really tasty!
+```
+
+The match block is also able to filter objects.
+
+### Example
+
+```javascript
+with console from std:io
+
+let person = Person("John", "Doe")
+
+match(person)
+    Person{firstName: "John"} => console->out("Hello, John") //single operations can be written like so
+end
 ```
 

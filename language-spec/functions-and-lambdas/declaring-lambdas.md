@@ -7,7 +7,7 @@ The **simple lambda** consists of only a single statement. It will automatically
 ### Example
 
 ```javascript
-var add = { x,y => x + y}
+var add = {x,y => x + y}
 add(2,2) //this would return 4
 ```
 

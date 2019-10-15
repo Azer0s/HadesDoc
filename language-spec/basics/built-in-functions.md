@@ -119,3 +119,41 @@ returns:
 */
 ```
 
+## send & self
+
+`send` sends an object to the specified PID.
+
+`self` returns the pid of the calling process.
+
+### Example
+
+```swift
+with msg from std:io
+
+class Counter
+    private var int counter
+    
+    func loop()
+        receive(m)
+            msg{state: :increment} => counter++
+            msg{state: :get, data := sender} => send(sender, counter)       
+        end
+    end
+    
+    func Counter()
+        counter = 0
+    end
+end
+
+var ctr = spawn({_ => Counter().loop()})
+send(ctr, msg(:increment))
+send(ctr, msg(:increment))
+send(ctr, msg(:increment))
+
+send(ctr, msg(:get, self()))
+
+receive(m)
+    _ => console->out(m) //prints 3
+end
+```
+
