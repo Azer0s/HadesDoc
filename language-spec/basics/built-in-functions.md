@@ -21,7 +21,7 @@ nameof(a) //returns 'a'; the nameof function of the `this` scope is called
 
 ```javascript
 with console from std:io
-console->nameof() //returns 'console'
+console.nameof() //returns 'console'
 ```
 
 ## type
@@ -35,9 +35,10 @@ var a = 42
 var b = "Hello world"
 var c = true
 
-a->type() //returns 'int'
-b->type() //returns 'string'
-c->type() //returns 'bool'
+a.type() //returns 'int'
+b.type() //returns 'string'
+c.type() //returns 'bool'
+:ok.type() //returns 'atom'
 ```
 
 ## equals
@@ -49,11 +50,11 @@ c->type() //returns 'bool'
 ```javascript
 with list from std:collections
 
-1->equals(2) //returns false
-"Hello"->equals("Hello") //returns true
+1.equals(2) //returns false
+"Hello".equals("Hello") //returns true
 
-var foo = list->of({1,2,3,4,5})
-foo->equals(list->of({1,2,3,4,5})) //returns true
+var foo = list.of({1,2,3,4,5})
+foo.equals(list.of({1,2,3,4,5})) //returns true
 ```
 
 ## hash
@@ -65,11 +66,11 @@ For complex types \(except protos\), `hash` serializes the variable into a JSON,
 ```javascript
 var jd = User("John", "Doe")
 
-jd->hash() //returns the MD5 of the JSONified User object
+jd.hash() //returns the MD5 of the JSONified User object
 
-"Hello"->hash() //returns the MD5 hash of "Hello"
+"Hello".hash() //returns the MD5 hash of "Hello"
 
-9000->hash() //returns the MD5 hash of "9000"
+9000.hash() //returns the MD5 hash of "9000"
 ```
 
 ## toString
@@ -81,7 +82,7 @@ jd->hash() //returns the MD5 of the JSONified User object
 ```javascript
 with list from std:collections
 
-list->of({1,2,3,4,5})->toString()
+list.of({1,2,3,4,5}).toString()
 /*
 returns:
 [1,2,3,4,5]
@@ -104,7 +105,7 @@ Person("John",30,
 {
     Car("Ford",{"Fiesta", "Focus", "Mustang"}),
     Car("Fiat",{"500", "Panda"})
-})->toString()
+}).toString()
 
 /*
 returns:
@@ -153,7 +154,7 @@ send(ctr, msg(:increment))
 send(ctr, msg(:get, self()))
 
 receive(m)
-    _ => console->out(m) //prints 3
+    _ => console.out(m) //prints 3
 end
 ```
 

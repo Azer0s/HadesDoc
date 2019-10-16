@@ -60,7 +60,9 @@ In Hades, the equality operator also works as a typecheck. You can check any val
 #### Example
 
 ```swift
-123 == int
+123 == int // true
+
+var v = VideoStream("bigbuckbunny.mp4")
 v is Vector
 ```
 

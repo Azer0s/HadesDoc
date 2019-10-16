@@ -14,7 +14,7 @@ condition ? statementIfConditionIsTrue : statementIfConditionIsFalse
 with math from std:math
 
 func sinc(dec x)
-    put x != 0.0 ? math->sin(x)/x : 1.0
+    put x != 0.0 ? math.sin(x)/x : 1.0
 end
 ```
 
@@ -29,13 +29,13 @@ with exceptions from std:exceptions
 with console from std:io
 
 var doStuff = { x =>
-    x :: raise exceptions->ArgumentNullException("{} is null"->format(nameof(x)))
+    x :: raise exceptions.ArgumentNullException("{} is null".format(nameof(x)))
 }
 
 try
     doStuff(null)
 catch(default e)
-    console->out(e->message)
+    console.out(e.message)
 end
 
 //Output: x is null

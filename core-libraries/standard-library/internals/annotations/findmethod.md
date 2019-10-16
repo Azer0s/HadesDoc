@@ -21,6 +21,6 @@ func method1()
     out("Hello from method1")
 end
 
-annotations->findMethod("myMethod")->target() //Output: Hello from method1
+annotations.findMethod("myMethod").target() //Output: Hello from method1
 ```
 

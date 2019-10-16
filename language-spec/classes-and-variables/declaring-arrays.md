@@ -10,7 +10,7 @@ A one dimensional fixed array is created either via an array literal or via appe
 with console from std:io
 
 var hello = {"Hello","world"} //type of the array is infered here, fooBar is now a string[2]
-console->out(hello [0] + hello [1]) //Output: Hello world
+console.out(hello[0] + hello[1]) //Output: Hello world
 
 var fooBar
 fooBar[0] = 10 //type of the array is infered here, fooBar is now an int[*]
@@ -21,7 +21,18 @@ var int[10] fib = {1,1,2,3,5,8,13,21,34,55}
 var barFoo
 barFoo[0] = null //type of the array is infered here, barFoo is now an object[*]
 
-let string[*] text = console->in()->split(" ")
+let string[*] text = console.in().split(" ")
+```
+
+## Declaring arrays with mixed types
+
+An array with that is prefixed with dynamic `*` can contain data of multiple types. This means that the array can be used as a tuple. 
+
+```javascript
+var* [*] arr
+arr = {:ok, "Hello world"}
+
+let result = {1, true, 20.231}
 ```
 
 ## Declaring multi-dimensional arrays

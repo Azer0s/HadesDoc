@@ -20,9 +20,9 @@ In Hades, the source of a pipeline can be any variable or statement. The source 
 
 ```javascript
 {"Mango", "Avocado", "Orange", "Apple"}
-|> map({x=>x->toLower()},??)
+|> map(??, {x=>x.toLower()})
 
-//is being converted to map({"Mango", "Avocado", "Orange", "Apple"}, {x=>x->toLower()})
+//is being converted to map({"Mango", "Avocado", "Orange", "Apple"}, {x=>x.toLower()})
 ```
 
 ## Pipelines in variable assignment
@@ -31,7 +31,7 @@ In Hades, the source of a pipeline can be any variable or statement. The source 
 
 ```javascript
 var lowerList = {"Mango", "Avocado", "Orange", "Apple"}
-                |> map({x=>x->toLower()},??)
+                |> map(??, {x=>x.toLower()})
 ```
 
 ## List functions with pipelines
@@ -42,12 +42,12 @@ One can import the functions defined in list as fixed and use them in pipelines 
 with list fixed from std:collections
 with console from std:io
 
-var fruits = list->of({"Apple", "Banana", "Mango", "Kiwi", "Avocado"})
+var fruits = list.of({"Apple", "Banana", "Mango", "Kiwi", "Avocado"})
 
 fruits
-|> map({x => x->toLower()}, ??)
-|> filter({x => x->startsWith("a")}, ??)
-|> forEach({x => console->out(x)}, ??)
+|> map({x => x.toLower()})
+|> filter({x => x.startsWith("a")})
+|> forEach({x => console.out(x)})
 
 /*
 Output:

@@ -4,7 +4,7 @@
 
 ```javascript
 with console from std:io
-console->out("Hello world")
+console.out("Hello world")
 ```
 
 ## Defining functions
@@ -50,19 +50,19 @@ end
 
 func print(args a)
     for(var arg in a)
-        console->out(arg)
+        console.out(arg)
     end
 end
 
 func print(args a, int times)
     for(var i in range(1,times))
         for(var arg in a)
-            console->out(arg)
+            console.out(arg)
         end
     end
 end
 
-console->out(sum(1, 2, 3, 4, 5, 6, 7, 8, 9))
+console.out(sum(1, 2, 3, 4, 5, 6, 7, 8, 9))
 print("Hello", ",", "world")
 print("Hello", "," ,"world", 5/*this is the 'times' parameter*/)
 ```
@@ -75,20 +75,20 @@ With function guards, an initial condition has to be fulfilled for the function 
 with console from std:io
 
 func myFunction(int a) requires a < 10
-    console->out("a is smaller than 10")
+    console.out("a is smaller than 10")
 end
 
 func myFunction(int a) requires a is 11
-    console->out("a is 11")
+    console.out("a is 11")
 end
 
 func myFunction(int a) requires a > 11 and a < 21
-    console->out("a is greater than 11 and smaller than 21")
+    console.out("a is greater than 11 and smaller than 21")
 end
 
 func myFunction(int a)
     //This default function is called when every condition is false
-    console->out("a is " + a)
+    console.out("a is " + a)
 end
 
 myFunction(1)  //Output: a is smaller than 10
@@ -106,7 +106,7 @@ with math as m from std:math
 
 func doMath(int a)
     func root(int b)
-        put m->sqrt(b)
+        put m.sqrt(b)
     end
 
     func square(b)
@@ -186,13 +186,13 @@ An if statement can contain n `else if` blocks and one `else` block.
 with console from std:io
 
 if(a < 10)
-    console->out("a is smaller than 10")
+    console.out("a is smaller than 10")
 else if(a is 11)
-    console->out("a is 11")
+    console.out("a is 11")
 else if(a > 11 and a < 21)
-    console->out("a is greater than 11 and smaller than 21")
+    console.out("a is greater than 11 and smaller than 21")
 else
-    console->out("a is " + a)
+    console.out("a is " + a)
 end
 ```
 
@@ -205,13 +205,13 @@ with math fixed from std:math
 with console from std:io
 
 for(var int i in range(0,10) /*'range' returns an array with the number 0 to 10*/)
-    console->out(i)
+    console.out(i)
 end
 
 let string[] fruits = {"Apple", "Banana", "Mango", "Kiwi"}
 
 for(var fruit in fruits)
-    console->out("{} is very healthy"->format(fruit))
+    console.out("{} is very healthy".format(fruit))
 end
 ```
 
@@ -222,7 +222,7 @@ with console from std:io
 var c = 0
 
 while(c not 10)
-    console->out("c is {}"->format(c))
+    console.out("c is {}".format(c))
     c++
 end
 ```
@@ -237,14 +237,14 @@ with exceptions from std:exceptions
 with str from std:string
 with Int from std:int
 
-var a = params->get(0)
-var b = params->get(1)
+var a = params.get(0)
+var b = params.get(1)
 
-a :: raise exceptions->ArgumentNullException("{} is null"->format(nameof(a)))
-b :: raise exceptions->ArgumentNullException("{} is null"->format(nameof(b)))
+a :: raise exceptions.ArgumentNullException("{} is null".format(nameof(a)))
+b :: raise exceptions.ArgumentNullException("{} is null".format(nameof(b)))
 
 var number = a < b ? b : a
-var numberFromString = Int->parse(value="This is not an integer", raise=false)
+var numberFromString = Int.parse(value="This is not an integer", raise=false)
 //one could also use int("This is not an integer")
 var numberFromStringNullchecked = numberFromString :: 0
 ```
@@ -258,12 +258,12 @@ with console from std:io
 
 let fruit = "Apple"
 var lambda action = { _ => 
-    console->print("Variable is of type string")
+    console.print("Variable is of type string")
 }
 
 match(fruit)
-    "Apple" => { _ => console->out("Apples are really tasty!")}
-    fruit->type() is "string" => action
+    "Apple" => { _ => console.out("Apples are really tasty!")}
+    fruit.type() is "string" => action
 end
 
 /*
@@ -273,8 +273,8 @@ Variable is of type string
 */
 
 match first(fruit)
-    "Apple" => { _ => console->out("Apples are really tasty!")}
-    fruit->type() is "string" => action
+    "Apple" => { _ => console.out("Apples are really tasty!")}
+    fruit.type() is "string" => action
 end
 
 //Output: Apples are really tasty!
@@ -289,13 +289,13 @@ with console from std:io
 var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
 
 try
-    connection->open()
-    console->out("Connection open!")
-    connection->close()
+    connection.open()
+    console.out("Connection open!")
+    connection.close()
 catch(object::SqlException e)
-    console->out("SqlException was caught!")
+    console.out("SqlException was caught!")
 catch(e)
-    console->out("An unknown exception was caught!")
+    console.out("An unknown exception was caught!")
 end
 ```
 
@@ -315,21 +315,21 @@ Pipelines in Hades are a neat way to write out nested methods.
 with list fixed from std:collections
 with console from std:io
 
-var fruits = list->of({"Apple", "Banana", "Mango", "Kiwi", "Avocado"})
+var fruits = list.of({"Apple", "Banana", "Mango", "Kiwi", "Avocado"})
 
 fruits
-|> map({x => x->toLower()}, ??)
-|> filter({x => x->startsWith("a")}, ??)
-|> forEach({x => console->out(x)}, ??)
+|> map({x => x.toLower()},)
+|> filter({x => x.startsWith("a")})
+|> forEach(??, {x => console.out(x)})
 
 //As opposed to
 
-forEach({x => console->out(x)}, filter({x => x->startsWith("a")}, map({x => x->toLower()}, fruits)))
+forEach({x => console.out(x)}, filter({x => x.startsWith("a")}, map({x => x.toLower()}, fruits)))
 //map(lambda, list), filter(lambda, list) and forEach(lambda, list) are static methods from the list class
 
 //Or even
 
-fruits->map({x => x->toLower()})->filter({x => x->startsWith("a")})->forEach({x => console->out(x)})
+fruits.map({x => x.toLower()}).filter({x => x.startsWith("a")}).forEach({x => console.out(x)})
 //map(lambda), filter(lambda) and forEach(lambda) are methods from the list class
 ```
 
@@ -346,20 +346,20 @@ class Vector
     var z = 0
     
     func Vector(x,y,z)
-        this->x = x
-        this->y = y
-        this->z = z
+        this.x = x
+        this.y = y
+        this.z = z
     end
     
     func! toString()
-        put "{},{},{}"->format(x,y,z)
+        put "{},{},{}".format(x,y,z)
     end
     
     func! op+(v)
         if(v is int)
             put Vector(x+v,y+v,z+v)
         else if(v is Vector)
-            put Vector(x + v->x, y + v->y, z + v->z)
+            put Vector(x + v.x, y + v.y, z + v.z)
         end
         
         put null
@@ -370,7 +370,7 @@ var v1 = Vector(1,2,3)
 var v2 = Vector(4,5,6)
 
 var v3 = v1 + v2 //overloaded operator is called
-console->out(v3) //outputs: 5,7,9
+console.out(v3) //outputs: 5,7,9
 ```
 
 ## Script file arguments
@@ -380,9 +380,9 @@ Script file arguments should be at the very top of the source file. They don't r
 ```javascript
 with params from std:params
 
-var address = params->getString(0)
-var port = params->getInt(1)
-var deamon = params->getBoolByName("d","deamon")
+var address = params.getString(0)
+var port = params.getInt(1)
+var deamon = params.getBoolByName("d","deamon")
 
 /*
 so the execution call could look like:

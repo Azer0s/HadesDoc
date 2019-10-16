@@ -43,15 +43,15 @@ listCommand = "dir"
 %else if eq OS Linux%
 listCommand = "ls"
 %else%
-console->out("OS not recognized!")
-os->exit(-1)
+console.out("OS not recognized!")
+os.exit(-1)
 &fi%
 
 %if ge OS_VERSION 1803%
-os->exec("wslpath 'c:\users'")
+os.exec("wslpath 'c:\users'")
 %fi%
 
-os->exec(listCommand)
+os.exec(listCommand)
 ```
 
 ## `import` statement
@@ -63,7 +63,7 @@ The import statement copies the content of the specified file and pastes it into
 ```swift
 func print(args a)
     for(var arg in a)
-        console->out(arg)
+        console.out(arg)
     end
 end
 ```
@@ -83,7 +83,7 @@ with console from std:io
 
 %import classDef.hd%
 
-printer()->print("Hello","world")
+printer().print("Hello","world")
 ```
 
 ### Result
@@ -96,11 +96,11 @@ with console from std:io
 class printer
     func print(args a)
         for(var arg in a)
-            console->out(arg)
+            console.out(arg)
         end
     end
 end
 
-printer()->print("Hello","world")
+printer().print("Hello","world")
 ```
 

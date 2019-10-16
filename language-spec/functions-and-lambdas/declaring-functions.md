@@ -12,13 +12,13 @@ A function which is defined with static types, can only be called with those lin
 with console from std:io
 
 func add(int a, int b)
-    console->out("Adds two ints")
+    console.out("Adds two ints")
     put a + b
 end
 
 func add(string a, string b)
-    console->out("Concatenates two strings")
-    put "{} {}"->format(a,b)
+    console.out("Concatenates two strings")
+    put "{} {}".format(a,b)
 end
 
 add(2,2) //Output: Adds two ints

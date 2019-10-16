@@ -40,6 +40,8 @@
     * [string](language-spec/functions-of-simple-types/string.md)
     * [dec](language-spec/functions-of-simple-types/dec.md)
     * [bool](language-spec/functions-of-simple-types/bool.md)
+    * [atom](language-spec/functions-of-simple-types/atom.md)
+    * [pid](language-spec/functions-of-simple-types/pid.md)
   * [Other](language-spec/other/README.md)
     * [Annotations](language-spec/other/annotations.md)
     * [C\# interop](language-spec/other/c-interop.md)

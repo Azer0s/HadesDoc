@@ -52,3 +52,18 @@ bool(0.0) //returns false
 bool("not a bool") //raises TypeConversionException
 ```
 
+## atom
+
+Under the hood, the conversion to an atom will use `toString`. The conversion to an atom will only fail if one tries to convert a non-simple datatype. 
+
+### Example
+
+```swift
+atom(1) //returns :1
+atom(true) //returns :true
+```
+
+## pid
+
+The only datatype that can be converted to a pid is an int. That is because the value of a pid is an  int.
+

@@ -17,7 +17,7 @@ class UserService
     let userRepository
     
     func getById(id)
-        put userRepository->findById(id)->orElse(null)
+        put userRepository.findById(id).orElse(null)
     end
 end
 ```

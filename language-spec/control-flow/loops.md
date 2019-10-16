@@ -11,13 +11,13 @@ with math fixed from std:math
 with console from std:io
 
 for(var int i in range(0,10) /*'range' returns an array with the number 0 to 10*/)
-    console->out(i)
+    console.out(i)
 end
 
 let string[] fruits = {"Apple", "Banana", "Mango", "Kiwi"}
 
 for(var fruit in fruits)
-    console->out("{} is very healthy"->format(fruit))
+    console.out("{} is very healthy".format(fruit))
 end
 ```
 
@@ -25,7 +25,7 @@ If you don't need a variable, you can use an underscore instead of naming a vari
 
 ```javascript
 for(_ in range(0,10))
-    console->out("")
+    console.out("")
 end
 ```
 
@@ -40,7 +40,7 @@ with console from std:io
 var c = 0
 
 while(c not 10)
-    console->out("c is {}"->format(c))
+    console.out("c is {}".format(c))
 end
 ```
 
@@ -59,7 +59,7 @@ while(true)
         stop
     end
     
-    console->out("c is {}"->format(c))
+    console.out("c is {}".format(c))
     c++
 end
 ```
@@ -79,7 +79,7 @@ while(c not 10)
         skip
     end
     
-    console->out("c is 5")
+    console.out("c is 5")
     c++
 end
 
@@ -92,7 +92,7 @@ for(var fruit in fruits)
         skip
     end
     
-    console->out(fruit)
+    console.out(fruit)
 end
 
 /*

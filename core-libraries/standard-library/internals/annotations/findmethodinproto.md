@@ -20,7 +20,7 @@ with console fixed from std:io
 
 #myMethod()
 func method1(x)
-    out("Hello from method1 (invoked by {})"->format(x))
+    out("Hello from method1 (invoked by {})".format(x))
 end
 ```
 
@@ -30,7 +30,7 @@ end
 with annotations from std:internals
 with myScript.hd as script
 
-annotations->findMethodInProto("myMethod",script)->target("main.hd") //Output: Hello from method1 (invoked by main.hd)
+annotations.findMethodInProto("myMethod",script).target("main.hd") //Output: Hello from method1 (invoked by main.hd)
 ```
 
 

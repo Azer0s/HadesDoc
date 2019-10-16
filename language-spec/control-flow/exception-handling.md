@@ -19,17 +19,17 @@ with file from std:io
 var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
     
 try
-    connection->open()
-    console->out("Connection opened!")
-    connection->close()
+    connection.open()
+    console.out("Connection opened!")
+    connection.close()
 catch(object::SqlException e) //here, an SqlException is caught
-    console->out("SqlException was caught!")
+    console.out("SqlException was caught!")
 catch(e) //in the case that any other exception was raised, this block is invoked
-    console->out("An unknown exception was caught!")
+    console.out("An unknown exception was caught!")
 end
 
 try
-    file->read("1.txt")
+    file.read("1.txt")
 catch(e)
     //ignored
 end
@@ -37,27 +37,27 @@ end
 try
     var f = file("2.txt")
 catch(object::FileNotFoundException e)
-    console->out("File {} not found!"->format(e->file))
+    console.out("File {} not found!".format(e.file))
 end
 
 let srv = server(port=8080)
-srv->get("/:path", {req, res => 
-    let path = req->param["path"]
+srv.get("/:path", {req, res => 
+    let path = req.param["path"]
     try
-        if (file->exists(path))
-            let f = file->open(path)
-            res->send(f->read())
+        if (file.exists(path))
+            let f = file.open(path)
+            res.send(f.read())
         else
             raise 404
         end
     catch(int status)
-        res->status(status)
+        res.status(status)
     else
-        res->status(200)
+        res.status(200)
     end
 })
 
-srv->start()
+srv.start()
 ```
 
 Code in an `else` block after a `try-catch` will be executed if the execution didn't fail.
@@ -69,11 +69,11 @@ with console from std:io
 var number
 
 try
-    number = int(console->in())
+    number = int(console.in())
 catch(e)
-    console->out("Could not parse number")
+    console.out("Could not parse number")
 else
-    console->out("Number is {}"->format(number))
+    console.out("Number is {}".format(number))
 end
 ```
 
@@ -88,9 +88,9 @@ with exceptions from std:exceptions
 
 func equals(object a, object b)
     if(a == null)
-        raise exceptions->ArgumentNullException("{} is null"->format(nameof(a)))
+        raise exceptions.ArgumentNullException("{} is null".format(nameof(a)))
     else if(b equals null)
-        raise exceptions->ArgumentNullException("{} is null"->format(nameof(b))
+        raise exceptions.ArgumentNullException("{} is null".format(nameof(b))
     end
     
     put a == b

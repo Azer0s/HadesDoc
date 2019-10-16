@@ -20,8 +20,8 @@ with map from std:collections
 
 let pets = map()
 
-pets->put("Joe", "Dog")
-pets->get("Joe")
+pets.put("Joe", "Dog")
+pets.get("Joe")
 
 // is equivalent to
 

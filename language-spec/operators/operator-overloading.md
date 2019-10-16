@@ -13,20 +13,20 @@ class Vector
     var z = 0
     
     func Vector(x,y,z)
-        this->x = x
-        this->y = y
-        this->z = z
+        this.x = x
+        this.y = y
+        this.z = z
     end
     
     func! toString()
-        put "{},{},{}"->format(x,y,z)
+        put "{},{},{}".format(x,y,z)
     end
     
     func! op+(v)
         if(v is int)
             put Vector(x+v,y+v,z+v)
         else if(v is Vector)
-            put Vector(x + v->x, y + v->y, z + v->z)
+            put Vector(x + v.x, y + v.y, z + v.z)
         end
         
         put null
@@ -37,7 +37,7 @@ var v1 = Vector(1,2,3)
 var v2 = Vector(4,5,6)
 
 var v3 = v1 + v2 //overloaded operator is called on v1
-console->out(v3) //outputs: 5,7,9
+console.out(v3) //outputs: 5,7,9
 ```
 
 ## Index operator overloading
@@ -56,18 +56,18 @@ class MyWayCoolerMapImplementation
     private let map = Map()
     
     func! index(args indices)
-        if (indices->length is 1)
+        if (indices.length is 1)
             let index = indices[0]
-            put map->get(index)
+            put map.get(index)
         end
         
         raise ArgumentError()
     end
     
     func! index(args indices, newValue)
-        if (indices->length is 1)
+        if (indices.length is 1)
             let index = indices[0]
-            map->put(index, newValue)
+            map.put(index, newValue)
         end
         
         raise ArgumentError()

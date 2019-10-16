@@ -31,7 +31,7 @@ with fib from fib.hd
 with console from std:io
 with Int fixed from std:int
 
-fib->calculate(parse(value=console->in(),raise=false,defaultValue=0))
+fib.calculate(parse(value=console.in(),raise=false,defaultValue=0))
 ```
 
 ## Perceptron
@@ -75,6 +75,6 @@ end
 with console from std:io
 
 var factorial = { x => (x >= 1) ? x * factorial(x-1) : 1 }
-console->out(factorial(6))
+console.out(factorial(6))
 ```
 

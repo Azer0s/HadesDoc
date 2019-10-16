@@ -10,13 +10,13 @@ The `if` statement executes statements based on some conditions.
 with console from std:io
 
 if(a < 10)
-    console->out("a is smaller than 10")
+    console.out("a is smaller than 10")
 else if(a is 11)
-    console->out("a is 11")
+    console.out("a is 11")
 else if(a > 11 and a < 21)
-    console->out("a is greater than 11 and smaller than 21")
+    console.out("a is greater than 11 and smaller than 21")
 else
-    console->out("a is " + a)
+    console.out("a is " + a)
 end
 ```
 
@@ -28,13 +28,13 @@ An `if` block can contain multiple `else if` block.
 with console from std:io
 
 if(condition)
-    console->out("yes")
+    console.out("yes")
 else if(otherCondition)
-    console->out("maybe")
+    console.out("maybe")
 else if(otherOtherCondition)
-    console->out("maybe not")
+    console.out("maybe not")
 else
-    console->out("no")
+    console.out("no")
 end
 ```
 
@@ -49,12 +49,12 @@ with console from std:io
 
 let fruit = "Apple"
 var lambda action = { _ => 
-    console->print("Variable is of type string")
+    console.print("Variable is of type string")
 }
 
 match all(fruit)
-    "Apple" => { _ => console->out("Apples are really tasty!")}
-    fruit->type() is "string" => action
+    "Apple" => console.out("Apples are really tasty!")
+    fruit.type() is "string" => action
 end
 
 /*
@@ -64,24 +64,32 @@ Variable is of type string
 */
 
 match(fruit)
-    "Apple" => { _ => console->out("Apples are really tasty!")}
-    fruit->type() is "string" => action
+    "Apple" => { _ => console.out("Apples are really tasty!")}
+    fruit.type() is "string" => action
 end
 
 //Output: Apples are really tasty!
 ```
 
-The match block is also able to filter objects.
+The match block is also able to filter objects and lists.
 
 ### Example
 
-```javascript
+```swift
 with console from std:io
 
 let person = Person("John", "Doe")
+let list = {:ok, "Hello world"}
 
-match(person)
-    Person{firstName: "John"} => console->out("Hello, John") //single operations can be written like so
+func doMatch(a)
+    match(a)
+        Person{firstName: "John"} =>
+            console.out("Hello, John") //single operations can be written like so
+        {:ok, msg} => console.out(msg)
+    end
 end
+
+doMatch(person) //Output: Hello, John
+doMatch(list) //Output: Hello world
 ```
 

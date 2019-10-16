@@ -32,16 +32,6 @@ Like a function, a lambda can contain other function, class or struct definition
 
 **See:** [Declaring lambdas](../functions-and-lambdas/declaring-lambdas.md)
 
-### atom
-
-An atom is a constant whose value is its name. They can be used to express certain operation states like `:ok` or  `:error`.
-
-An atom is declared like so `:name`.
-
-### pid
-
-A pid or process id is a reference to another thread. You can obtain the pid by either spawning a process or calling `self()`.
-
 ## Simple data types
 
 ### int
@@ -60,6 +50,16 @@ The range of a dec is -79,228,162,514,264,337,593,543,950,335.0 to 79,228,162,51
 ### bool
 
 The bool \(named after George Boole\) can store a single bit represented by the values true \(meaning 1\) or false \(meaning 0\).
+
+### atom
+
+An atom is a constant whose value is its name. They can be used to express certain operation states like `:ok` or  `:error`. Atoms may contain `-` and `_` but not `.`. 
+
+An atom is declared like so `:name`.
+
+### pid
+
+A pid or process id is a reference to another thread. You can obtain the pid by either spawning a process or calling `self()`.
 
 ### Summary
 

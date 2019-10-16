@@ -17,10 +17,10 @@ class Member
     end
     
     func Member(firstname, lastname, birthday, id)
-        this->firstname = firstname
-        this->lastname = lastname
-        this->birthday = birthday
-        this->id = id
+        this.firstname = firstname
+        this.lastname = lastname
+        this.birthday = birthday
+        this.id = id
     end
 end
 
@@ -46,7 +46,7 @@ class Calculator
 end
 
 var calc = Calculator //assign calc to the class proto
-calc->add(2,2)
+calc.add(2,2)
 ```
 
 ## Declaring a non-instantiable class
@@ -64,7 +64,7 @@ fixed class Calculator
     end
     
     func add(a,b)
-        put Adder()->add(a,b)
+        put Adder().add(a,b)
     end
     
     func sub(a,b)
@@ -72,8 +72,8 @@ fixed class Calculator
     end
 end
 
-Calculator->add(2,2)
-Calculator->Adder()->add(2,2) //This works too because we declared a non-fixed (instantiable) class inside the fixed class
+Calculator.add(2,2)
+Calculator.Adder().add(2,2) //This works too because we declared a non-fixed (instantiable) class inside the fixed class
 ```
 
 ## Declaring a class within a class
@@ -91,7 +91,7 @@ class outerClass
     end
 end
 
-var innerClass = outerClass->innerClass() //Outputs: Hello from inner class
+var innerClass = outerClass.innerClass() //Outputs: Hello from inner class
 ```
 
 ## Declaring a class within a function
@@ -109,8 +109,8 @@ func getPerson(fn,ln)
         end
         
         func Person(firstname,lastname)
-            this->firstname = firstname
-            this->lastname = lastname
+            this.firstname = firstname
+            this.lastname = lastname
         end
     end
     
@@ -146,7 +146,7 @@ end
 class Daughter < Mother
 end
 
-Daughter()->talk() //Outputs: I am female
+Daughter().talk() //Outputs: I am female
 ```
 
 ### Multiple inheritance
@@ -159,7 +159,7 @@ When functions overlap each other when inheriting from multiple members, the ord
 class Child < Mother, Father
 end
 
-Child()->talk() //Outputs: I am male
+Child().talk() //Outputs: I am male
 /*
  Because the Father class was inherited after the Mother class,
  the talk function of Father overwrites the talk function in Mother
@@ -171,7 +171,7 @@ Child()->talk() //Outputs: I am male
 If you still want to make the code from the example above work, you need to call the method on Mother explicitly. The built-in super function allows you to do exactly that.
 
 ```swift
-Child()->super(Mother)->talk()
+Child().super(Mother).talk()
 ```
 
 ## Overriding inherited members
@@ -189,7 +189,7 @@ class OverrideChild < Father
     end
 end
 
-OverrideChild()->talk() //Outputs: I am a child
+OverrideChild().talk() //Outputs: I am a child
 ```
 
 
