@@ -150,9 +150,23 @@ Fixed functions are like static function in Java or C\#. One can only declare fi
 
 ## Overriding functions
 
-### Overriding built-in functions
+One can override functions \(both built-in, as well as inherited\) by appending `!` to the `func` statement. Some internal functions are not overridable because of the way they're implemented. These functions are `type`, `nameof`, `send` and `self`.
 
-### Overriding inherited functions
+#### Example
+
+```swift
+with assert from std:testing
+
+class Car
+    ...
+    func! toString()
+        put "My custom string"
+    end
+end
+
+assert.equal(Car().toString(), "My custom string")
+assert.equal("{}".format(Car()), "My custom string")
+```
 
 ## Default values
 
