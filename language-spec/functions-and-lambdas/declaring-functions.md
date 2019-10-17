@@ -8,7 +8,7 @@ In Hades, function declarations don't contain the return type of the functions. 
 
 A function which is defined with static types, can only be called with those lines. If a function definition for a function with the types specified in the function call does not exist, execution will fail.
 
-### Example
+#### Example
 
 ```swift
 with console from std:io
@@ -32,6 +32,8 @@ add(1.5,1.5) //Execution fails
 
 This function can be used with every datatype.
 
+#### Example
+
 ```swift
 with console from std:io
 
@@ -49,6 +51,8 @@ add(1.5,1.5) //Output: 3.0
 ### Varargs
 
 Varargs allow for method invocation with multiple parameters which are treated as a single parameter array by the function. A function can only have one vararg parameter.
+
+#### Example
 
 ```swift
 with console from std:io
@@ -86,6 +90,8 @@ print("Hello", "," ,"world", 5/*this is the 'times' parameter*/)
 
 With function guards, an initial condition has to be fulfilled for the function to be called. If the condition is not fulfilled, another function \(ordered by declaration\) with the same name and different, or no, function guard is called.
 
+#### Example
+
 ```swift
 with console from std:io
 
@@ -116,6 +122,8 @@ myFunction(50) //Output: a is 50
 
 As with normal function declarations, nested functions can either explicitly name a type, or not:
 
+#### Example
+
 ```swift
 with math as m from std:math
 
@@ -132,15 +140,13 @@ func doMath(int a)
 end
 ```
 
-## Function attributes
-
 ### Access modifiers
+
+Functions can have access modifiers. If they do, they follow the same rules as variables. See [Non-local Variables](../classes-and-variables/declaring-variables.md#non-local-variables).
 
 ### Fixed function
 
 Fixed functions are like static function in Java or C\#. One can only declare fixed functions in classes, because in scripts or mixed files, every function which is outside a class is accessible.
-
-### Using function guards
 
 ## Overriding functions
 
@@ -152,6 +158,8 @@ Fixed functions are like static function in Java or C\#. One can only declare fi
 
 When a function that has default values is being used, the sequence of the parameters which don't have default values stays the same as an invocation without overriding these defaults.
 
+#### Example
+
 ```swift
 func functionWithDefaultValues(a,b=1,c,d="d",e,f=true)
     ...
@@ -159,10 +167,4 @@ end
 
 functionWithDefaultValues(b=2, d="D", "This is 'a'", "This is 'c'", f=false, "This is 'e'") 
 ```
-
-## Functions and lambdas
-
-### Internal representation of functions
-
-### Assigning a function to a lambda
 

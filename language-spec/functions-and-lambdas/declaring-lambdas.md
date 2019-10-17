@@ -44,3 +44,43 @@ var hello = { _ => console.out:"Hello, world!" }
 hello()
 ```
 
+## Assigning a function to a lambda variable
+
+One can assign a function to a lambda. If the function has function guards, they are being rewritten into a `match` block internally. This can be useful when passing a function to a method. 
+
+### Example
+
+```swift
+with console from std:io
+
+func myFunction(int a) requires a < 10
+    console.out("a is smaller than 10")
+end
+
+func myFunction(int a)
+    //This default function is called when every condition is false
+    console.out("a is " + a)
+end
+
+var lambda fn = myFunction
+
+fn(1)  //Output: a is smaller than 10
+fn(50) //Output: a is 50
+```
+
+```swift
+with console from std:io
+
+func onInit()
+    console.out("Component initialized!")
+end
+
+func onError(e)
+    console.outError("There was an error: {}".format(e))
+end
+
+...
+
+comp.init(onInit, onError)
+```
+
