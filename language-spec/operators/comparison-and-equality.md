@@ -63,6 +63,6 @@ In Hades, the equality operator also works as a typecheck. You can check any val
 123 == int // true
 
 var v = VideoStream("bigbuckbunny.mp4")
-v is Vector
+v is Vector // false
 ```
 
