@@ -7,309 +7,7 @@ with console from std:io
 console.out("Hello world")
 ```
 
-## Defining functions
-
-In Hades, function declarations don't contain the return type of the functions. Neither do the datatypes of the input values have to be defined.
-
-### Function with dynamically-**typed** parameters
-
-This function can be used with every datatype.
-
-```swift
-func add(a,b)
-    put a + b
-end
-```
-
-### Function with s**tatically typed** parameters
-
-This function can only be used with int.
-
-```swift
-func add(int a, int b)
-    put a + b
-end
-```
-
-### Varargs
-
-Varargs allow for method invocation with multiple parameters which are treated as a single parameter array by the function. A function can only have one vararg parameter.
-
-```swift
-with console from std:io
-
-func sum(args int a)
-    var result = 0
-
-    for(var i in a)
-        result += i
-    end
-
-    put result
-end
-
-func print(args a)
-    for(var arg in a)
-        console.out(arg)
-    end
-end
-
-func print(args a, int times)
-    for(var i in range(1,times))
-        for(var arg in a)
-            console.out(arg)
-        end
-    end
-end
-
-console.out(sum(1, 2, 3, 4, 5, 6, 7, 8, 9))
-print("Hello", ",", "world")
-print("Hello", "," ,"world", 5/*this is the 'times' parameter*/)
-```
-
-### Function guards
-
-With function guards, an initial condition has to be fulfilled for the function to be called. If the condition is not fulfilled, another function \(ordered by declaration\) with the same name and different, or no, function guard is called.
-
-```swift
-with console from std:io
-
-func myFunction(int a) requires a < 10
-    console.out("a is smaller than 10")
-end
-
-func myFunction(int a) requires a is 11
-    console.out("a is 11")
-end
-
-func myFunction(int a) requires a > 11 and a < 21
-    console.out("a is greater than 11 and smaller than 21")
-end
-
-func myFunction(int a)
-    //This default function is called when every condition is false
-    console.out("a is " + a)
-end
-
-myFunction(1)  //Output: a is smaller than 10
-myFunction(11) //Output: a is 11
-myFunction(15) //Output: a is greater than 11 and smaller than 21
-myFunction(50) //Output: a is 50
-```
-
-### Nested functions
-
-As with normal function declarations, nested functions can either explicitly name a type, or not:
-
-```swift
-with math as m from std:math
-
-func doMath(int a)
-    func root(int b)
-        put m.sqrt(b)
-    end
-
-    func square(b)
-        put b * b
-    end
-
-    put square(a) + root(a)
-end
-```
-
-## Defining variables
-
-Variables can be assigned with the `=` operator.
-
-### Read-only local variable
-
-```javascript
-let string a = "Hello, World!" //Immediate assignment
-let b = "What's up?" //Type 'string' is inferred
-let string c //Type 'string' is given, but variable is not assigned
-let d //Type is inferred on first usage
-```
-
-### Mutable local variables
-
-```kotlin
-var string a = "Hello, World!" //Immediate assignment
-var b = "What's up?" //Type 'string' is inferred
-var string c //Type 'string' is given, but variable is not assigned
-var d //Type is inferred on first usage
-var* e //Dynamic variable; can be anything, type can change
-```
-
-### Variables outside of functions
-
-Variables outside of functions \(either in script files or class definitions\) can name an access modifier.
-
-```csharp
-protected //Accessible from all inherited members
-public  //Accessible over direct access
-private //Not accessible from outside
-```
-
-#### Examples:
-
-```swift
-object[] var EMPLOYEES
-
-class employee
-    public let string firstname = "John"
-    public let lastname = "Doe"
-    private var int age = 18
-    var string[] attributes //When no access modifier is given, the variable will have private access
-end
-```
-
-## Comments
-
-Hades supports end-of-line and block comments.
-
-```c
-//A simple end-of-line comment
-
-/*
-*A lot of text is best written
-*into a block comment.
-*/
-```
-
-## Control flow
-
-### `if` statement
-
-An if statement can contain n `else if` blocks and one `else` block.
-
-```javascript
-with console from std:io
-
-if(a < 10)
-    console.out("a is smaller than 10")
-else if(a is 11)
-    console.out("a is 11")
-else if(a > 11 and a < 21)
-    console.out("a is greater than 11 and smaller than 21")
-else
-    console.out("a is " + a)
-end
-```
-
-### `for` loop
-
-In Hades, there is no C-style count-controlled loop, but only a foreach loop which iterates over an array.
-
-```javascript
-with math fixed from std:math
-with console from std:io
-
-for(var int i in range(0,10) /*'range' returns an array with the number 0 to 10*/)
-    console.out(i)
-end
-
-let string[] fruits = {"Apple", "Banana", "Mango", "Kiwi"}
-
-for(var fruit in fruits)
-    console.out("{} is very healthy".format(fruit))
-end
-```
-
-### `while` loop
-
-```javascript
-with console from std:io
-var c = 0
-
-while(c not 10)
-    console.out("c is {}".format(c))
-    c++
-end
-```
-
-### Ternary and nullcheck operators
-
-Hades supports conditional expressions and nullchecking with inline statements.
-
-```javascript
-with params from std:params
-with exceptions from std:exceptions
-with str from std:string
-with Int from std:int
-
-var a = params.get(0)
-var b = params.get(1)
-
-a :: raise exceptions.ArgumentNullException("{} is null".format(nameof(a)))
-b :: raise exceptions.ArgumentNullException("{} is null".format(nameof(b)))
-
-var number = a < b ? b : a
-var numberFromString = Int.parse(value="This is not an integer", raise=false)
-//one could also use int("This is not an integer")
-var numberFromStringNullchecked = numberFromString :: 0
-```
-
-### Match
-
-The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. If multiple match cases evaluate to true, the first match case is invoked, except if specified otherwise \(with `match all`\).
-
-```javascript
-with console from std:io
-
-let fruit = "Apple"
-var lambda action = { _ => 
-    console.print("Variable is of type string")
-}
-
-match all(fruit)
-    "Apple" => { _ => console.out("Apples are really tasty!")}
-    fruit.type() is "string" => action
-end
-
-/*
-Output: 
-Apples are really tasty!
-Variable is of type string
-*/
-
-match(fruit)
-    "Apple" => { _ => console.out("Apples are really tasty!")}
-    fruit.type() is "string" => action
-end
-
-//Output: Apples are really tasty!
-```
-
-### Exception handling
-
-```javascript
-with client from mssql:client
-with console from std:io
-
-var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
-
-try
-    connection.open()
-    console.out("Connection open!")
-    connection.close()
-catch(object::SqlException e)
-    console.out("SqlException was caught!")
-catch(e)
-    console.out("An unknown exception was caught!")
-end
-```
-
-## Instantiating classes
-
-```javascript
-with Calculator as calc from calc //loads from calc.hd
-
-var calculator = calc() //no new keyword in Hades; instead the proto 'calc' is called
-```
-
 ## Pipelines
-
-Pipelines in Hades are a neat way to write out nested methods.
 
 ```javascript
 with list fixed from std:collections
@@ -318,75 +16,74 @@ with console from std:io
 var fruits = list.of({"Apple", "Banana", "Mango", "Kiwi", "Avocado"})
 
 fruits
-|> map({x => x.toLower()})
+|> map(??, {x => x.toLower()})
 |> filter({x => x.startsWith("a")})
+//if ?? is not in the parameters, the method is inserted as the first parameter
 |> forEach(??, {x => console.out(x)})
-
-//As opposed to
-
-forEach({x => console.out(x)}, filter({x => x.startsWith("a")}, map({x => x.toLower()}, fruits)))
-//map(lambda, list), filter(lambda, list) and forEach(lambda, list) are static methods from the list class
-
-//Or even
-
-fruits.map({x => x.toLower()}).filter({x => x.startsWith("a")}).forEach({x => console.out(x)})
-//map(lambda), filter(lambda) and forEach(lambda) are methods from the list class
 ```
 
-## Operator overloading
-
-All operator in Hades can be overloaded. The syntax for this is similar to overloading an inherited function.
+## Function guards
 
 ```swift
-with console from std:io
+with console fixed from std:io
 
-class Vector
-    var x = 0
-    var y = 0
-    var z = 0
-    
-    func Vector(x,y,z)
-        this.x = x
-        this.y = y
-        this.z = z
-    end
-    
-    func! toString()
-        put "{},{},{}".format(x,y,z)
-    end
-    
-    func! op+(v)
-        if(v is int)
-            put Vector(x+v,y+v,z+v)
-        else if(v is Vector)
-            put Vector(x + v.x, y + v.y, z + v.z)
-        end
-        
-        put null
-    end
+func myFunction(int a) requires a < 10
+    console.out("a is smaller than 10")
 end
 
-var v1 = Vector(1,2,3)
-var v2 = Vector(4,5,6)
+func myFunction(int a) requires a > 10
+    console.out("a is greater than 10")
+end
 
-var v3 = v1 + v2 //overloaded operator is called
-console.out(v3) //outputs: 5,7,9
+out(myFunction(5))   // a is smaller than 10
+out(myFunction(17))  // a is greater than 10
 ```
 
-## Script file arguments
+## Actors
 
-Script file arguments should be at the very top of the source file. They don't require a type specification, but can have one if you want the script execution to fail when an argument with the wrong type was given.
+```swift
+with msg from std:io
+with sleep from std:time
+
+func ping()
+    receive(m)
+        {:ping, data} => {_ =>
+            sleep.seconds(1)
+            send(data, :pong)
+        }
+    end
+    ping()
+end
+
+func pong()
+    receive(m)
+        {:pong, data} => {_ =>
+            sleep.seconds(1)
+            send(data, :ping)
+        }
+    end
+    pong()
+end
+
+var pingPid = spawn({_ => ping()}
+var pongPid = spawn({_ => pong()}
+
+send(pingPid, {:ping, pongPid})
+```
+
+## Fibonacci sequence
 
 ```javascript
-with params from std:params
+with console from std:io
 
-var address = params.getString(0)
-var port = params.getInt(1)
-var deamon = params.getBoolByName("d","deamon")
+func fib(n)
+    if((n is 0) or (n is 1))
+        put n
+    end
+    
+    put fib(n-1) + fib(n-2)
+end
 
-/*
-so the execution call could look like:
-hades server.hd localhost 8080 -d true
-*/
+fib(10) |> console.out
 ```
 

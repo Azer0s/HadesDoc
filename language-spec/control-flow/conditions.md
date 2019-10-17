@@ -40,7 +40,7 @@ end
 
 ## `match` block
 
-The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. By default only the first block that matches is invoked. If the desired behavior is instead to invoke all matching blocks, use `match`.
+The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. If multiple match cases evaluate to true, the first match case is invoked, except if specified otherwise \(with `match all`\).
 
 ### Example
 

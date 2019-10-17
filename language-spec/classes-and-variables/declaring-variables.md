@@ -2,15 +2,34 @@
 
 ## Local variables
 
-A variable can have a type, be nullable, be dynamic and be an array. 
+A variable can have a type, be nullable, be dynamic and be an array.
 
 ### Mutable
 
 Mutable variables are declared `var`. You can specify the type of a variable by appending it after `var`.
 
+#### Example
+
+```kotlin
+var string a = "Hello, World!" //Immediate assignment
+var b = "What's up?" //Type 'string' is inferred
+var string c //Type 'string' is given, but variable is not assigned
+var d //Type is inferred on first usage
+var* e //Dynamic variable; can be anything, type can change
+```
+
 ### Immutable 
 
 Immutable variables are declared with `let`. You can specify the type of a variable by appending it after `let`.
+
+#### Example
+
+```javascript
+let string a = "Hello, World!" //Immediate assignment
+let b = "What's up?" //Type 'string' is inferred
+let string c //Type 'string' is given, but variable is not assigned
+let d //Type is inferred on first usage
+```
 
 ### Dynamic
 
@@ -31,11 +50,32 @@ var int? count
 var string? name
 ```
 
+## Access modifiers
+
+Access modifiers can control who has access to a specific variable.
+
+```csharp
+protected //Accessible from all inherited members
+public  //Accessible over direct access
+private //Not accessible from outside
+```
+
 ## Non-local variables
 
 ### In a class
 
 Variables in a class can have any access modifier. Since Hades has inheritance, variables in classes can also be protected.
+
+#### Example
+
+```swift
+class Employee
+    public let string firstname
+    public let lastname
+    private var int age = 18
+    var string[] attributes //When no access modifier is given, the variable will have private access
+end
+```
 
 ### In a struct
 

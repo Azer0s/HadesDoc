@@ -1,5 +1,13 @@
 # Declaring classes
 
+## Instantiating classes
+
+```javascript
+with Calculator as calc from calc //loads from calc.hd
+
+var calculator = calc() //no new keyword in Hades; instead the proto 'calc' is called
+```
+
 ## Declaring a class
 
 ### Example

@@ -45,3 +45,21 @@ func add(a,b) requires (a :: false) and (b :: false)
 end
 ```
 
+```javascript
+with params from std:params
+with exceptions from std:exceptions
+with str from std:string
+with Int from std:int
+
+var a = params.get(0)
+var b = params.get(1)
+
+a :: raise exceptions.ArgumentNullException("{} is null".format(nameof(a)))
+b :: raise exceptions.ArgumentNullException("{} is null".format(nameof(b)))
+
+var number = a < b ? b : a
+var numberFromString = Int.parse(value="This is not an integer", raise=false)
+//one could also use int("This is not an integer")
+var numberFromStringNullchecked = numberFromString :: 0
+```
+
