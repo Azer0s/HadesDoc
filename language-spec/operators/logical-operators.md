@@ -33,5 +33,3 @@ false or false // false
 true || false  // true 
 ```
 
-
-

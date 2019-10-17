@@ -31,6 +31,7 @@
     * [Type conversions in simple variable types](language-spec/classes-and-variables/type-conversions-in-simple-variable-types.md)
   * [Actors](language-spec/actors/README.md)
     * [Message passing](language-spec/actors/message-passing.md)
+    * [GenServer](language-spec/actors/genserver.md)
     * [Channels](language-spec/actors/channels.md)
   * [Functions and lambdas](language-spec/functions-and-lambdas/README.md)
     * [Declaring functions](language-spec/functions-and-lambdas/declaring-functions.md)

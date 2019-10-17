@@ -118,6 +118,62 @@ myFunction(15) //Output: a is greater than 11 and smaller than 21
 myFunction(50) //Output: a is 50
 ```
 
+### Function guards by match
+
+In addition to the normal function guards, Hades also offers function guards by object/list match. To use this feature, one must first define the function.
+
+```swift
+with console from std:io
+
+func doSomething(person);
+
+func doSomething(person := Employee{department: "IT"})
+    console.out("{} works in IT".format(person.firstname))
+end
+
+func doSomething(person := Employee{department: "Finance", firstname := firstname})
+    console.out("{} works in Finance".format(firstname))
+end
+
+doSomething(Employee("John", "Finance")) //Output: John works in Finance
+doSomething(Employee("Steve", "IT")) //Output: Steve works in IT
+```
+
+```swift
+with console from std:io
+
+func getStatus(status);
+
+func getStatus(status := :ok)
+    console.out("Everything went well")    
+end
+
+func getStatus(status := :error)
+    console.out("An error occured")    
+end
+
+func getStatus(status)
+    console.out("Unrecognized status code")
+end
+
+getStatus(:ok) //Output: Everything went well
+getStatus(:foo) //Output: Unrecognized status code
+```
+
+```swift
+with console from std:io
+
+func onReceive(e);
+
+func onReceive(e := {:ok, data := message})
+    console.out("Received {}".format(message))
+end
+
+func onReceive(e := {:ok, data := _})
+    console.out("Error while receiving message")
+end
+```
+
 ### Nested functions
 
 As with normal function declarations, nested functions can either explicitly name a type, or not:

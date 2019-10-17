@@ -50,6 +50,18 @@ var int? count
 var string? name
 ```
 
+## Deconstruct assign 
+
+One can deconstruct/match an object or a list and assign it to a variable.
+
+```swift
+var MyResult{err := err, result := result} = doSomething()
+var MyResult{err: null, result := result} = doSomething() //throws an exception if err is not null
+
+var {status, data} = doSomethingElse()
+var {:ok, data} = doSomethingElse() //throws an exception if first element of list is not :ok
+```
+
 ## Access modifiers
 
 Access modifiers can control who has access to a specific variable.
