@@ -61,6 +61,7 @@ Under the hood, the conversion to an atom will use `toString`. The conversion to
 ```swift
 atom(1) //returns :1
 atom(true) //returns :true
+atom("ok") //returns :ok
 ```
 
 ## pid

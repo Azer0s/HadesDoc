@@ -28,7 +28,6 @@
     * [Declaring structs](language-spec/classes-and-variables/declaring-structs.md)
     * [Declaring protos](language-spec/classes-and-variables/declaring-protos.md)
     * [Declaring arrays](language-spec/classes-and-variables/declaring-arrays.md)
-    * [Working with objects](language-spec/classes-and-variables/working-with-objects.md)
     * [Type conversions in simple variable types](language-spec/classes-and-variables/type-conversions-in-simple-variable-types.md)
   * [Actors](language-spec/actors/README.md)
     * [Message passing](language-spec/actors/message-passing.md)

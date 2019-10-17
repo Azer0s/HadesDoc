@@ -2,25 +2,71 @@
 
 ## Local variables
 
+A variable can have a type, be nullable, be dynamic and be an array. 
+
 ### Mutable
+
+Mutable variables are declared `var`. You can specify the type of a variable by appending it after `var`.
 
 ### Immutable 
 
+Immutable variables are declared with `let`. You can specify the type of a variable by appending it after `let`.
+
 ### Dynamic
+
+Dynamic variables can change their type at runtime. A dynamic variable is declared by appending `*`after `var`. An immutable variable can not be dynamic. 
+
+#### Example
+
+```swift
+var* my_dynamic_var
+```
+
+### Nullable
+
+You can make variables of simple datatypes nullable by appending `?` after the datatype. An immutable variable can not be nullable. Dynamic variables can also not be nullable as assigning null to a dynamic variable works out of the box \(it will make the variable an object\).
+
+```swift
+var int? count
+var string? name
+```
 
 ## Non-local variables
 
 ### In a class
 
+Variables in a class can have any access modifier. Since Hades has inheritance, variables in classes can also be protected.
+
 ### In a struct
 
+Variables in a struct can not have an access modifier because in a struct, all variables are publicly accessible. Other than that, variable declaration in a struct is the same as anywhere else.
+
 ### In a script
+
+Variables in a script can be private or public since scripts can be used by other Hades code. Variables in scripts can not be protected as scripts are unable to inherit.
 
 ## Access modifier annotate blocks
 
 The access modifier annotate block can set the access specifier for multiple variables at a time. Access modifier blocks can only be used in classes and scripts.
 
-### In a class
+An access modifier block is declared with `@modifier`. Access modifier blocks follow the same rule as non-local variables.
 
-### In a script
+### Example
+
+```swift
+class Vehicle
+    @public
+        var string make
+        var int speed
+    end
+    
+    @protected
+        var bool manned?
+    end
+end
+
+@private
+    var object connection
+end
+```
 
