@@ -26,7 +26,7 @@ let string[*] text = console.in().split(" ")
 
 ## Declaring arrays with mixed types
 
-An array with that is prefixed with dynamic `*` can contain data of multiple types. This means that the array can be used as a tuple. 
+An array declaration that is prefixed with `*` can contain data of multiple types. This means that the array can be used as a tuple. 
 
 ```javascript
 var* [*] arr

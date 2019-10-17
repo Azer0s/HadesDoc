@@ -69,7 +69,7 @@ print("Hello", "," ,"world", 5/*this is the 'times' parameter*/)
 
 ### Function guards
 
-With function guards, an initial condition has to be fulfilled for the function to be called. If the condition is not fulfilled, another function \(ordered by declaration\) with the same name and different, or no ,function guard is called.
+With function guards, an initial condition has to be fulfilled for the function to be called. If the condition is not fulfilled, another function \(ordered by declaration\) with the same name and different, or no, function guard is called.
 
 ```swift
 with console from std:io
@@ -251,7 +251,7 @@ var numberFromStringNullchecked = numberFromString :: 0
 
 ### Match
 
-The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. If multiple match cases evaluate to true, the first match case is invoked, except if specified otherwise \(with `to multiple`\).
+The match block is similar to a switch block in C languages. Match cases accept lambdas as actions. If multiple match cases evaluate to true, the first match case is invoked, except if specified otherwise \(with `match all`\).
 
 ```javascript
 with console from std:io
@@ -261,7 +261,7 @@ var lambda action = { _ =>
     console.print("Variable is of type string")
 }
 
-match(fruit)
+match all(fruit)
     "Apple" => { _ => console.out("Apples are really tasty!")}
     fruit.type() is "string" => action
 end
@@ -272,7 +272,7 @@ Apples are really tasty!
 Variable is of type string
 */
 
-match first(fruit)
+match(fruit)
     "Apple" => { _ => console.out("Apples are really tasty!")}
     fruit.type() is "string" => action
 end
@@ -318,7 +318,7 @@ with console from std:io
 var fruits = list.of({"Apple", "Banana", "Mango", "Kiwi", "Avocado"})
 
 fruits
-|> map({x => x.toLower()},)
+|> map({x => x.toLower()})
 |> filter({x => x.startsWith("a")})
 |> forEach(??, {x => console.out(x)})
 
