@@ -76,6 +76,10 @@ src/ - Upper most directory for source files
 
 Most things in Hades follow [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase), except for preprocessor variables which are uppercase and underscore separated, and native libraries which are named like so: `native library name : library file`. Classes, constructors and struct names follow [PascalCase](https://wiki.c2.com/?PascalCase) while proto names are in [Lower Camel Case](http://wiki.c2.com/?LowerCamelCase).
 
+{% hint style="info" %}
+**These are not "best practices". These are just recommendations. If you wish to change these conventions for your project, do so.**
+{% endhint %}
+
 ### Preprocessor variables
 
 ```csharp
@@ -90,7 +94,7 @@ func addTwoNumbers(a,b)
     put a + b
 end
 
-class classWithFixedFunction
+class ClassWithFixedFunction
     fixed func addTwoNumbers(a,b)
         put a + b
     end

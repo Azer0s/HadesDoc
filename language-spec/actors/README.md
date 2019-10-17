@@ -6,5 +6,24 @@ More on the actor model [here](https://www.brianstorti.com/the-actor-model/#targ
 
 ![](../../.gitbook/assets/actors.svg)
 
+One can create a new actor with the built-in `spawn` function.
 
+### Example
+
+```swift
+with console from std:io
+with WaitGroup from std:sync
+
+var wg = WaitGroup()
+
+spawn({_ =>
+    wg.add()
+    for(_ in 0|..|11)
+        console.out("Hello from the actor!")
+    end
+    wg.done()
+})
+
+wg.wait()
+```
 

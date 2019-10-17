@@ -29,6 +29,18 @@ for(_ in range(0,10))
 end
 ```
 
+Range also has a shorthand: `..`.
+
+### Example
+
+```swift
+1..5 //returns [1,2,3,4,5]
+1|..5 //returns [2,3,4,5]
+1|..|5 //returns [2,3,4]
+
+"a".."Z" //returns ["a", "b"..."X", "Y", "Z"]
+```
+
 ## `while` loop
 
 The `while` loop pretty much works like you'd expect. It loops as long as a given condition evaluates to `true`.
