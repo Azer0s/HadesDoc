@@ -79,7 +79,7 @@ chan << "Bar"
 console.in()
 ```
 
-### Example - Send to all, wait
+### Example - Send to all, wait until everyone received
 
 Here, the channel waits until everyone received the message to exit the blocking `channel.get` call. 
 
@@ -87,7 +87,7 @@ Here, the channel waits until everyone received the message to exit the blocking
 with Channel from std:sync
 with console from std:io
 
-var chan = Channel(mode=:all_wait)
+var chan = Channel(mode=:waitForAll)
 
 func worker(worker, channel)
     channel.get()
@@ -106,7 +106,7 @@ chan << :hello
 console.in()
 ```
 
-### Example - Send to all, balance
+### Example - Load balance
 
 This will load balance between multiple actors.
 
@@ -114,7 +114,7 @@ This will load balance between multiple actors.
 with Channel from std:sync
 with console from std:io
 
-var chan = Channel(mode=:all_balance)
+var chan = Channel(mode=:loadBalance)
 
 func worker(worker, channel)
     while(true)
