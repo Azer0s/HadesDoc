@@ -16,17 +16,17 @@ class Counter < GenServer
   end
   
   //If you want to use function matching, you have to explicetly state this
-  func! handle_call(msg, from, state);
+  func! call(msg, from, state);
   
   //We don't need ! since we already stated it above
-  func handle_call(msg := :get, _, state)
-    {:reply, state, state}
+  func call(msg := :get, _, state)
+    put {:reply, state, state}
   end
   
-  func! handle_cast(msg, state);
+  func! cast(msg, state);
   
-  func handle_cast(msg := {:increment, number}, state)
-    {:noreply, state + number}
+  func cast(msg := {:increment, number}, state)
+    put {:noreply, state + number}
   end
 end
 
