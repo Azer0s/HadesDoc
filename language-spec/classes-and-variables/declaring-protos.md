@@ -2,7 +2,7 @@
 
 ## Import statements
 
-Protos are usually created when importing libraries or external code. See [Imports and libraries](../basics/imports-and-libraries.md).
+Protos are usually created when importing libraries or external code. 
 
 ## Instantiable protos
 

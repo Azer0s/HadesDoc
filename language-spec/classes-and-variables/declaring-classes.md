@@ -130,6 +130,7 @@ end
 
 #### Base classes
 
+{% code title="" %}
 ```swift
 with console fixed from std:io
 
@@ -145,6 +146,7 @@ class Father
     end
 end
 ```
+{% endcode %}
 
 ### Simple inheritance
 

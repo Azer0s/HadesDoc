@@ -70,11 +70,13 @@ end
 
 ### classDef.hd
 
+{% code title="" %}
 ```swift
 class printer
 %import function.hd%
 end
 ```
+{% endcode %}
 
 ### main.hd
 

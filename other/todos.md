@@ -8,7 +8,7 @@
 * [ ] **Language Spec**
   * [ ] **Basics**
     * [x] [Types](../language-spec/basics/types.md)
-    * [ ] [Imports and libraries](../language-spec/basics/imports-and-libraries.md)
+    * [ ] [Imports and libraries]()
     * [x] [Built-in functions](../language-spec/basics/built-in-functions.md)
   * [x] **Operators**
     * [x] [Comparison and equality](../language-spec/operators/comparison-and-equality.md)
