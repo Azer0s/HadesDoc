@@ -8,10 +8,10 @@ description: 'Maps keys to values, no fancy magic.'
 
 | Method | Parameters | Return type | Is fixed? |
 | :--- | :--- | :--- | :--- |
-| `put` | `object, object` | `undefined` | ❌ |
-| `get` | `object` | `object` | ❌ |
-| `index` | `object, object` | `undefined` | ❌ |
-| `index` | `object` | `object` | ❌ |
+| `put` | `any, any` | `null` | ❌ |
+| `get` | `any` | `any` | ❌ |
+| `index` | `any, any` | `null` | ❌ |
+| `index` | `any` | `any` | ❌ |
 
 ### Examples
 
