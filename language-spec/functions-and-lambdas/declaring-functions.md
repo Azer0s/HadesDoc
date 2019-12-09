@@ -131,7 +131,7 @@ func doSomething(person := Employee{department: "IT"})
     console.out("{} works in IT".format(person.firstname))
 end
 
-func doSomething(person := Employee{department: "Finance", firstname := firstname})
+func doSomething(Employee{department: "Finance", firstname := firstname})
     console.out("{} works in Finance".format(firstname))
 end
 
@@ -148,7 +148,7 @@ func getStatus(status := :ok)
     console.out("Everything went well")    
 end
 
-func getStatus(status := :error)
+func getStatus(:error)
     console.out("An error occured")    
 end
 
@@ -165,11 +165,11 @@ with console from std:io
 
 func onReceive(e);
 
-func onReceive(e := {:ok, data := message})
+func onReceive(e := {:ok, message})
     console.out("Received {}".format(message))
 end
 
-func onReceive(e := {:ok, data := _})
+func onReceive({:error, _})
     console.out("Error while receiving message")
 end
 ```
