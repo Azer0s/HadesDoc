@@ -36,20 +36,19 @@ Like a function, a lambda can contain other function, class or struct definition
 
 ### int
 
-The int \(or integer\) datatype stores whole numbers from -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807.
+The int \(or integer\) datatype stores whole numbers. Its size can vary from 8 bit \(`int8`\) to 64 bit \(`int64`\) and can be signed or unsigned \(`uint8`, `uint64`\). The default `int` type is 32 bit.
 
 ### string
 
-A string variable stores text. There's virtually no upper limit for the size of a string \(although the Microsoft CLR, on which the reference implementation of Hades runs on, tops out at 1,073,741,824 \(or 2^30\) character, since a 2GB limit is imposed\).
+A string variable stores text. There's virtually no upper limit for the size of a string.
 
-### dec
+### float
 
-Similar to a float, the dec datatype stores a decimal number. The fundamental difference between a normal floating-point number and a dec, is that the dec has more precision and a smaller range.  
-The range of a dec is -79,228,162,514,264,337,593,543,950,335.0 to 79,228,162,514,264,337,593,543,950,335.0.
+The float stores a floating point number. Its size can vary from 32 bit \(`float32`\) to 64 bit \(`float64` or `double`\). The default `float` type is 32 bit.
 
 ### bool
 
-The bool \(named after George Boole\) can store a single bit represented by the values true \(meaning 1\) or false \(meaning 0\).
+The bool can store a single bit represented by the values true \(meaning 1\) or false \(meaning 0\).
 
 ### atom
 
@@ -65,20 +64,28 @@ A pid or process id is a reference to another thread. You can obtain the pid by 
 
 | Datatype | Range | Default Value |
 | :--- | :--- | :--- |
-| int | -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807 | 0 |
-| string | 0 to 1,073,741,824 characters | "" |
-| dec | -79,228,162,514,264,337,593,543,950,335.0 to 79,228,162,514,264,337,593,543,950,335.0 | 0.0 |
+| uint8 | 0 to 255 | 0 |
+| uint16 | 0 to 65,535 | 0 |
+| uint32/uint | 0 to 4,294,967,295 | 0 |
+| uint64 | 0 to 18,446,744,073,709,551,615 | 0 |
+| int8 | -128 to 127 | 0 |
+| int16 | -32,768 to 32,767 | 0 |
+| int32/int | -2,147,483,648 to 2,147,483,647 | 0 |
+| int64 | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 0 |
+| string | Pseudo infinite | "" |
+| float32/float | 1.2E-38 to 3.4E+38 | 0.0 |
+| float64/double | 2.3E-308 to 1.7E+308 | 0.0 |
 | bool | false or true | false |
-
-## Nullable simple data types
+| atom | Pseudo infinite | :\_ |
+| pid | 0 to 4,294,967,295 | 0 |
 
 Since every simple data type has a default value, per default you can not assign null to a variable with a simple datatype. If you want to make a variable of a simple data type nullable, you have to explicitly declare said variable as nullable. This can be done with appending a `?` after the data type of the variable. A constant variable cannot be nullable.
 
 #### Examples
 
 ```swift
-var int? a = null
-var string? b = null
+var a int? = null
+var b string? = null
 ```
 
 ## Arrays

@@ -13,7 +13,7 @@ condition ? statementIfConditionIsTrue : statementIfConditionIsFalse
 ```swift
 with math from std:math
 
-func sinc(dec x)
+func sinc(x float)
     put x != 0.0 ? math.sin(x)/x : 1.0
 end
 ```

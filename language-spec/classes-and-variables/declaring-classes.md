@@ -16,7 +16,7 @@ var calculator = calc() //no new keyword in Hades; instead the proto 'calc' is c
 with date from std:date
 
 class Member
-    private var string id
+    private var id string
     
     @public
         var firstname

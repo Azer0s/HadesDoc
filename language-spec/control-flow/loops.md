@@ -10,11 +10,11 @@ In Hades, there is no C-style count-controlled loop, but only a foreach loop whi
 with math fixed from std:math
 with console from std:io
 
-for(var int i in range(0,10) /*'range' returns an array with the number 0 to 10*/)
+for(var i int in range(0,10) /*'range' returns an array with the number 0 to 10*/)
     console.out(i)
 end
 
-let string[] fruits = {"Apple", "Banana", "Mango", "Kiwi"}
+let fruits string[] = {"Apple", "Banana", "Mango", "Kiwi"}
 
 for(var fruit in fruits)
     console.out("{} is very healthy".format(fruit))

@@ -27,16 +27,16 @@ fruits
 ```swift
 with console fixed from std:io
 
-func myFunction(int a) requires a < 10
+func myFunction(a int) requires a < 10
     console.out("a is smaller than 10")
 end
 
-func myFunction(int a) requires a > 10
+func myFunction(a int) requires a > 10
     console.out("a is greater than 10")
 end
 
-out(myFunction(5))   // a is smaller than 10
-out(myFunction(17))  // a is greater than 10
+myFunction(5) // a is smaller than 10
+myFunction(17) // a is greater than 10
 ```
 
 ## Actors

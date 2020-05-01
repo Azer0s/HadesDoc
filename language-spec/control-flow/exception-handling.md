@@ -16,7 +16,7 @@ with server from std:http
 with console from std:io
 with file from std:io
 
-var object connection = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
+var connection object = client("Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password")
     
 try
     connection.open()
@@ -35,7 +35,7 @@ catch(e)
 end
 
 try
-    var f = file("2.txt")
+    var f object::File = file("2.txt")
 catch(object::FileNotFoundException e)
     console.out("File {} not found!".format(e.file))
 end
@@ -86,7 +86,7 @@ The raise statement raises an exception.
 ```swift
 with exceptions from std:exceptions
 
-func equals(object a, object b)
+func equals(a object, b object)
     if(a == null)
         raise exceptions.ArgumentNullException("{} is null".format(nameof(a)))
     else if(b equals null)
