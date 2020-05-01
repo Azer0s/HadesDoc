@@ -32,6 +32,20 @@ var pow = { x,y =>
 pow(4,2) //this would return 16
 ```
 
+## Lambda return types
+
+Lambdas can state return and input types like so: `lambda::(input types)->return type`.
+
+```swift
+with console from std:io
+
+var bye lambda::(string)->string = { a string => put "Bye " + a }
+bye("Foo")
+
+var cheers lambda::(string)->none = { a => console.out("Cheers " + a) }
+cheers("Bar")
+```
+
 ## Declaring a lambda without parameters
 
 If no parameter is needed, an `_` is used as the parameter name, instead.
@@ -53,16 +67,16 @@ One can assign a function to a lambda. If the function has function guards, they
 ```swift
 with console from std:io
 
-func myFunction(int a) requires a < 10
+func myFunction(a int) requires a < 10
     console.out("a is smaller than 10")
 end
 
-func myFunction(int a)
+func myFunction(a int)
     //This default function is called when every condition is false
     console.out("a is " + a)
 end
 
-var lambda fn = myFunction
+var fn lambda::(int)->none = myFunction
 
 fn(1)  //Output: a is smaller than 10
 fn(50) //Output: a is 50
