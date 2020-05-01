@@ -48,13 +48,13 @@ The match block is similar to a switch block in C languages. Match cases accept 
 with console from std:io
 
 let fruit = "Apple"
-var action lambda = { _ => 
+var lambda action = { _ => 
     console.print("Variable is of type string")
 }
 
 match all(fruit)
     "Apple" => console.out("Apples are really tasty!")
-    fruit.type() is :string => action
+    fruit.type() is "string" => action
 end
 
 /*
@@ -65,7 +65,7 @@ Variable is of type string
 
 match(fruit)
     "Apple" => { _ => console.out("Apples are really tasty!")}
-    fruit.type() is :string => action
+    fruit.type() is "string" => action
 end
 
 //Output: Apples are really tasty!

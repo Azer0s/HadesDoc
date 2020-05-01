@@ -26,7 +26,7 @@ console.nameof() //returns 'console'
 
 ## type
 
-`type` returns the type of an object as an atom.
+`type` returns the type of an object as a string.
 
 ### Example
 
@@ -35,10 +35,10 @@ var a = 42
 var b = "Hello world"
 var c = true
 
-a.type() //returns :int
-b.type() //returns :string
-c.type() //returns :bool
-:ok.type() //returns :atom
+a.type() //returns 'int'
+b.type() //returns 'string'
+c.type() //returns 'bool'
+:ok.type() //returns 'atom'
 ```
 
 ## equals
@@ -96,9 +96,9 @@ class Car
 end
 
 class Person
-    let name string
-    var age int
-    var cars object::Car[]
+    let string name
+    var int age
+    var object[] cars
 end
 
 Person("John",30,

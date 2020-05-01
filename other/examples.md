@@ -7,7 +7,7 @@
 {% tabs %}
 {% tab title="With a function" %}
 ```swift
-func calculate(n int64) -> int64
+func calculate(n)
     if((n is 0) or (n is 1))
         put n
     end
@@ -19,7 +19,7 @@ end
 
 {% tab title="With a lambda" %}
 ```javascript
-var calculate lambda::(int64)->int64 = { x => ((x == 0) or (x == 1)) ? x : calculate(x-1) + calculate(x-2) }
+var calculate = { x => ((x == 0) or (x == 1)) ? x : calculate(x-1) + calculate(x-2) }
 ```
 {% endtab %}
 {% endtabs %}
@@ -37,7 +37,7 @@ fib.calculate(parse(value=console.in(),raise=false,defaultValue=0))
 ## Perceptron
 
 ```swift
-let points double[*] = 
+let dec[*] points = 
 {
     {245, 1400},
     {312, 1600},

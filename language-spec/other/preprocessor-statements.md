@@ -61,7 +61,7 @@ The import statement copies the content of the specified file and pastes it into
 ### function.hd
 
 ```swift
-func print(...a)
+func print(args a)
     for(var arg in a)
         console.out(arg)
     end
@@ -96,7 +96,7 @@ printer().print("Hello","world")
 with console from std:io
 
 class printer
-    func print(...a)
+    func print(args a)
         for(var arg in a)
             console.out(arg)
         end

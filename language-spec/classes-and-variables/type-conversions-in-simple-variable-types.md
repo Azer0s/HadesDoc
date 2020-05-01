@@ -4,7 +4,7 @@ Every simple variable type supports type conversion by invoking the constructor 
 
 ## int
 
-Available for `uint8`, `uint16`, `uint32`/`uint`, `uint64`, `int8`, `int16`, `int32`/`int` and `int64`. When the conversion to an int fails, an exception is thrown.
+When the conversion to an int fails, an exception is thrown.
 
 ### Example
 
@@ -26,17 +26,17 @@ string(true) //returns "true"
 string(22.3) //returns "true"
 ```
 
-## float
+## dec
 
-Available for `float32`/`float` as well as `float64`/`double`. When the conversion to a float fails, an exception is thrown.
+When the conversion to a dec fails, an exception is thrown.
 
 ### Example
 
 ```javascript
-float("22") //returns 22.0
-float("1.5") //returns 1.5
-float(false) //returns 0.0
-float(10) //returns 10.0
+dec("22") //returns 22.0
+dec("1.5") //returns 1.5
+dec(false) //returns 0.0
+dec(10) //returns 10.0
 ```
 
 ## bool

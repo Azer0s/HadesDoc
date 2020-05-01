@@ -40,7 +40,7 @@
     * [ ] [bool](../language-spec/functions-of-simple-types/bool.md)
   * [ ] **Other**
     * [x] [Annotations](../language-spec/other/annotations.md)
-    * [ ] [C\# interop]()
+    * [ ] [C\# interop](../language-spec/other/c-interop.md)
     * [ ] [Omitting braces]()
     * [x] [Preprocessor statements](../language-spec/other/preprocessor-statements.md)
     * [ ] [Reflection](../language-spec/other/reflection.md)

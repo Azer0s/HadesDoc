@@ -3,7 +3,7 @@
 ### Pages in this chapter
 
 * [Annotations](annotations.md)
-* [C\# interop]()
+* [C\# interop](c-interop.md)
 * [Comments](comments.md)
 * [Omitting braces]()
 * [Preprocessor statements](preprocessor-statements.md)

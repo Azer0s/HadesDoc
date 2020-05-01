@@ -90,12 +90,12 @@ Most things in Hades follow [Lower Camel Case](http://wiki.c2.com/?LowerCamelCas
 ### Functions \([Lower Camel Case](http://wiki.c2.com/?LowerCamelCase)\)
 
 ```swift
-func addTwoNumbers(a int,b int) -> int
+func addTwoNumbers(a,b)
     put a + b
 end
 
 class ClassWithFixedFunction
-    fixed func addTwoNumbers(a b int) -> int
+    fixed func addTwoNumbers(a,b)
         put a + b
     end
 end
@@ -105,11 +105,11 @@ end
 
 ```swift
 class Person
-    var id int
+    var int id
 
     @public
-        var firstname string
-        var lastname string
+        var string firstname
+        var string lastname
     end
 end
 ```
@@ -118,9 +118,9 @@ end
 
 ```csharp
 struct Person
-    var id int
-    var firstname string
-    var lastname string
+    var int id
+    var string firstname
+    var string lastname
 end
 ```
 
@@ -169,7 +169,7 @@ match(fruit)
         console.out("Apples are really tasty!")
         console.out("I like apples!")
     }
-    fruit.type() is :string => { _ => console.out("Variable is a string")} //Simple lambda
+    fruit.type() is "string" => { _ => console.out("Variable is a string")} //Simple lambda
 end
 ```
 

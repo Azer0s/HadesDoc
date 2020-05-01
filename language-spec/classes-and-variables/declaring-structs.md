@@ -8,8 +8,8 @@ A struct consists of the identifier `struct`, the name of the struct and the var
 
 ```swift
 struct Person
-    let firstname string
-    var lastname string
+    let string firstname
+    var string lastname
     let birthday
     var nationality
 end

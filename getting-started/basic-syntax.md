@@ -87,3 +87,17 @@ end
 fib(10) |> console.out
 ```
 
+### Lambdas
+
+```javascript
+with console from std:io
+
+var hello = { a => console.out("Hello " + a) }
+hello("Foo")
+
+var bye = { a string => console.out("Bye " + a) }
+bye("Bar")
+
+var cheers lambda::(string)->none = { a => console.out("Cheers " + a) }
+```
+
