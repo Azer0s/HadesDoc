@@ -174,6 +174,34 @@ func onReceive({:error, _})
 end
 ```
 
+### Custom blocks
+
+Custom blocks are syntactic sugar that behave like lambdas but are written in `do` syntax.
+
+**Example**
+
+```swift
+func forEach(arr *any[*], executor lambda::(any)->any)
+    put arr |> map(executor)
+end
+
+forEach({1, 2, 3}) do |x|
+    console.out(x)
+end
+
+var strings = forEach({1, 2, 3}) do |x|
+    put x.toString()
+end
+
+func doStuff(executor lambda::(none)->none)
+    executor()
+end
+
+doStuff do
+    console.out("Hello")
+end
+```
+
 ### Nested functions
 
 As with normal function declarations, nested functions can either explicitly name a type, or not:
